@@ -22,19 +22,19 @@ nav:
     - 'Utilization server': client/utilization-server.md
   - 'Application':
     - 'Server':
-      - 'List servers': application/servers.md
-      - 'Get server': application/server.md
-      - 'Get server by external id': application/server-ex.md
-      - 'Create server': application/create-server.md
-      - 'Delete server': application/delete-server.md
-      - 'Force delete server': application/force-delete-server.md
-      - 'Suspend server': application/suspend-server.md
-      - 'Unsuspend server': application/unsuspend-server.md
-      - 'Reinstall server': application/reinstall-server.md
-      - 'Rebuild server': application/rebuild-server.md
-      - 'Update server details': application/update-server-details.md
-      - 'Update server build': application/update-server-build.md
-      - 'Update server startup': application/update-server-startup.md
+      - 'List servers': application/server/servers.md
+      - 'Get server': application/server/server.md
+      - 'Get server by external id': application/server/server-ex.md
+      - 'Create server': application/server/create-server.md
+      - 'Delete server': application/server/delete-server.md
+      - 'Force delete server': application/server/force-delete-server.md
+      - 'Suspend server': application/server/suspend-server.md
+      - 'Unsuspend server': application/server/unsuspend-server.md
+      - 'Reinstall server': application/server/reinstall-server.md
+      - 'Rebuild server': application/server/rebuild-server.md
+      - 'Update server details': application/server/update-server-details.md
+      - 'Update server build': application/server/update-server-build.md
+      - 'Update server startup': application/server/update-server-startup.md
 
 markdown_extensions:
   - admonition
