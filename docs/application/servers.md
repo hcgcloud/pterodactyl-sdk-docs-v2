@@ -9,7 +9,10 @@ Get the collection of servers.
 ```
 
 ## Parameters
-*None*
+
+| Parameter | Description | Rules |
+| - | - | - |
+| page | The page number | |
 
 ## Returns
 

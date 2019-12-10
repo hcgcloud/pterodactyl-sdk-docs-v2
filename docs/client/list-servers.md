@@ -9,7 +9,10 @@ Get the collection of servers for the authenticated user.
 ```
 
 ## Parameters
-*None*
+
+| Parameter | Description | Rules |
+| - | - | - |
+| page | The page number | |
 
 ## Returns
 
