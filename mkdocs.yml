@@ -1,0 +1,23 @@
+site_name: Pterodactyl PHP SDK
+theme:
+  name: 'material'
+  language: 'en'
+  feature:
+    tabs: true
+    
+repo_name: hcgcloud/pterodactyl-sdk
+repo_url: https://github.com/hcgcloud/pterodactyl-sdk
+edit_uri: 'https://github.com/hcgcloud/pterodactyl-sdk-docs/edit/master/docs'
+
+nav:    
+  - 'Home':
+    - 'Welcome': index.md
+    - 'Getting Started': getting-started.md
+  - 'Client':
+    - 'List Servers': client/list-servers.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
