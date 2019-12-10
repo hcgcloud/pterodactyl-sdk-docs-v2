@@ -552,7 +552,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../create-server.md" title="Create server" class="md-nav__link">
+    <a href="../create-server/" title="Create server" class="md-nav__link">
       Create server
     </a>
   </li>
@@ -564,7 +564,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../delete-server.md" title="Delete server" class="md-nav__link">
+    <a href="../delete-server/" title="Delete server" class="md-nav__link">
       Delete server
     </a>
   </li>
@@ -576,7 +576,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../force-delete-server.md" title="Force delete server" class="md-nav__link">
+    <a href="../force-delete-server/" title="Force delete server" class="md-nav__link">
       Force delete server
     </a>
   </li>
@@ -588,7 +588,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../suspend-server.md" title="Suspend server" class="md-nav__link">
+    <a href="../suspend-server/" title="Suspend server" class="md-nav__link">
       Suspend server
     </a>
   </li>
@@ -600,7 +600,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../unsuspend-server.md" title="Unsuspend server" class="md-nav__link">
+    <a href="../unsuspend-server/" title="Unsuspend server" class="md-nav__link">
       Unsuspend server
     </a>
   </li>
@@ -612,7 +612,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../reinstall-server.md" title="Reinstall server" class="md-nav__link">
+    <a href="../reinstall-server/" title="Reinstall server" class="md-nav__link">
       Reinstall server
     </a>
   </li>
@@ -624,7 +624,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../rebuild-server.md" title="Rebuild server" class="md-nav__link">
+    <a href="../rebuild-server/" title="Rebuild server" class="md-nav__link">
       Rebuild server
     </a>
   </li>
@@ -746,7 +746,9 @@
                 <h1 id="get-server-by-external-id-with-application-api">Get Server by External Id <small>with Application API</small><a class="headerlink" href="#get-server-by-external-id-with-application-api" title="Permanent link">&para;</a></h1>
 <p>Get a server instance by external id, including it's allocations.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="x">$pterodactyl-&gt;serverEx($externalId);</span>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+    <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">serverEx</span><span class="p">(</span><span class="nv">$externalId</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 
 
@@ -772,6 +774,7 @@
 </tbody>
 </table>
 <h2 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h2>
+<p>Returns a <code>server instance</code>.</p>
 <div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
     <span class="nt">&quot;externalId&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
@@ -944,6 +947,20 @@
             </div>
           </a>
         
+        
+          <a href="../create-server/" title="Create server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Create server
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>

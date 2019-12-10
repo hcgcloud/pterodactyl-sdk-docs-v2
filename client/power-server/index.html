@@ -550,7 +550,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../application/create-server.md" title="Create server" class="md-nav__link">
+    <a href="../../application/create-server/" title="Create server" class="md-nav__link">
       Create server
     </a>
   </li>
@@ -562,7 +562,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../application/delete-server.md" title="Delete server" class="md-nav__link">
+    <a href="../../application/delete-server/" title="Delete server" class="md-nav__link">
       Delete server
     </a>
   </li>
@@ -574,7 +574,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../application/force-delete-server.md" title="Force delete server" class="md-nav__link">
+    <a href="../../application/force-delete-server/" title="Force delete server" class="md-nav__link">
       Force delete server
     </a>
   </li>
@@ -586,7 +586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../application/suspend-server.md" title="Suspend server" class="md-nav__link">
+    <a href="../../application/suspend-server/" title="Suspend server" class="md-nav__link">
       Suspend server
     </a>
   </li>
@@ -598,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../application/unsuspend-server.md" title="Unsuspend server" class="md-nav__link">
+    <a href="../../application/unsuspend-server/" title="Unsuspend server" class="md-nav__link">
       Unsuspend server
     </a>
   </li>
@@ -610,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../application/reinstall-server.md" title="Reinstall server" class="md-nav__link">
+    <a href="../../application/reinstall-server/" title="Reinstall server" class="md-nav__link">
       Reinstall server
     </a>
   </li>
@@ -622,7 +622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../application/rebuild-server.md" title="Rebuild server" class="md-nav__link">
+    <a href="../../application/rebuild-server/" title="Rebuild server" class="md-nav__link">
       Rebuild server
     </a>
   </li>
@@ -744,7 +744,12 @@
                 <h1 id="power-server-with-account-api">Power Server <small>with Account API</small><a class="headerlink" href="#power-server-with-account-api" title="Permanent link">&para;</a></h1>
 <p>Toggle the power on a given server.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="x">$pterodactyl-&gt;powerServer($serverIdentifier, $action);</span>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+    <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">powerServer</span><span class="p">(</span><span class="nv">$serverIdentifier</span><span class="p">,</span> <span class="nv">$action</span><span class="p">);</span>
+
+    <span class="c1">//For a server instance</span>
+    <span class="nv">$server</span><span class="o">-&gt;</span><span class="na">power</span><span class="p">(</span><span class="nv">$action</span><span class="p">);</span>
+<span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 
 
