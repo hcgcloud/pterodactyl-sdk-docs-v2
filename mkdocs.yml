@@ -34,7 +34,7 @@ nav:
       - 'Rebuild server': application/rebuild-server.md
       - 'Update server details': application/update-server-details.md
       - 'Update server build': application/update-server-build.md
-      - 'Update server startuo': application/update-server-startup.md
+      - 'Update server startup': application/update-server-startup.md
 
 markdown_extensions:
   - admonition
