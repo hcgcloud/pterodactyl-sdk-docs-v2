@@ -13,8 +13,28 @@ nav:
   - 'Home':
     - 'Welcome': index.md
     - 'Getting Started': getting-started.md
+    - 'Exceptions': exceptions.md
   - 'Client':
-    - 'List Servers': client/list-servers.md
+    - 'List servers': client/list-servers.md
+    - 'Get server': client/get-server.md
+    - 'Power server': client/power-server.md
+    - 'Command server': client/command-server.md
+    - 'Utilization server': client/utilization-server.md
+  - 'Application':
+    - 'Server':
+      - 'List servers': application/servers.md
+      - 'Get server': application/server.md
+      - 'Get server by external id': application/server-ex.md
+      - 'Create server': application/create-server.md
+      - 'Delete server': application/delete-server.md
+      - 'Force delete server': application/force-delete-server.md
+      - 'Suspend server': application/suspend-server.md
+      - 'Unsuspend server': application/unsuspend-server.md
+      - 'Reinstall server': application/reinstall-server.md
+      - 'Rebuild server': application/rebuild-server.md
+      - 'Update server details': application/update-server-details.md
+      - 'Update server build': application/update-server-build.md
+      - 'Update server startuo': application/update-server-startup.md
 
 markdown_extensions:
   - admonition
