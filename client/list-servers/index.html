@@ -634,7 +634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../application/update-server-details.md" title="Update server details" class="md-nav__link">
+    <a href="../../application/update-server-details/" title="Update server details" class="md-nav__link">
       Update server details
     </a>
   </li>
@@ -745,7 +745,7 @@
 <p>Get the collection of servers for the authenticated user.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
-    <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">listServers</span><span class="p">();</span>
+    <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">listServers</span><span class="p">(</span><span class="nx">int</span> <span class="nv">$page</span> <span class="o">=</span> <span class="mi">1</span><span class="p">);</span>
 <span class="cp">?&gt;</span><span class="x"></span>
 </pre></div>
 
@@ -757,24 +757,37 @@
 <p class="admonition-title">Note</p>
 <p><code>id</code>, <code>externalId</code>, <code>node</code>, <code>suspended</code>, <code>pack</code>, <code>createdAt</code>, <code>updatedAt</code> will be always <code>null</code>, as they're not available with Account API.</p>
 </div>
-<div class="codehilite"><pre><span></span><span class="p">[{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;externalId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;server1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;suspended&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;pack&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;server_owner&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598&quot;</span><span class="p">,</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;externalId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;server1&quot;</span><span class="p">,</span>
         <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;suspended&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;pack&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;server_owner&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;server1&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
+                <span class="nt">&quot;swap&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;disk&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
+                <span class="nt">&quot;io&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+                <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;feature_limits&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
         <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
             <span class="nt">&quot;swap&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -782,43 +795,43 @@
             <span class="nt">&quot;io&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
             <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">0</span>
         <span class="p">},</span>
-        <span class="nt">&quot;feature_limits&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;serverOwner&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;featureLimits&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
             <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="mi">0</span>
         <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
-        <span class="nt">&quot;swap&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;disk&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
-        <span class="nt">&quot;io&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
-        <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">0</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;serverOwner&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;featureLimits&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="mi">0</span>
-    <span class="p">}</span>
-<span class="p">},</span> <span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;externalId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;6928f121-45bf-4f95-869a-eaebf02cd2a6&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;6928f121&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;server2&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;suspended&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;pack&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;server_owner&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;6928f121&quot;</span><span class="p">,</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;externalId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;6928f121-45bf-4f95-869a-eaebf02cd2a6&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;6928f121&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;server2&quot;</span><span class="p">,</span>
         <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;suspended&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;pack&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;server_owner&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;6928f121&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;6928f121-45bf-4f95-869a-eaebf02cd2a6&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;server2&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
+                <span class="nt">&quot;swap&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;disk&quot;</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span>
+                <span class="nt">&quot;io&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+                <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">},</span>
+            <span class="nt">&quot;feature_limits&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
         <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
             <span class="nt">&quot;swap&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
@@ -826,26 +839,25 @@
             <span class="nt">&quot;io&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
             <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">0</span>
         <span class="p">},</span>
-        <span class="nt">&quot;feature_limits&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;serverOwner&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;featureLimits&quot;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
             <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="mi">0</span>
         <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
-        <span class="nt">&quot;swap&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;disk&quot;</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span>
-        <span class="nt">&quot;io&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
-        <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">0</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="p">[],</span>
-    <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;serverOwner&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;featureLimits&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}],</span>
+    <span class="nt">&quot;meta&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;pagination&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nt">&quot;per_page&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+            <span class="nt">&quot;current_page&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;total_pages&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nt">&quot;links&quot;</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}]</span>
+<span class="p">}</span>
 </pre></div>
 
 
