@@ -3,7 +3,9 @@ Get the collection of servers for the authenticated user.
 
 ## Usage
 ``` php
-$pterodactyl->listServers();
+<?php
+	$pterodactyl->listServers();
+?>
 ```
 
 ## Parameters

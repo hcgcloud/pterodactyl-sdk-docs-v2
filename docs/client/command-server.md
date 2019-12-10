@@ -3,7 +3,12 @@ Send a command to a given server.
 
 ## Usage
 ``` php
-$pterodactyl->commandServer($serverIdentifier, $command);
+<?php
+	$pterodactyl->commandServer($serverIdentifier, $command);
+
+	//For a server instance
+	$server->command($command);
+?>
 ```
 
 ## Parameters

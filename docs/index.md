@@ -1,6 +1,6 @@
 # Pterodactyl PHP SDK
 
-Pterodactyl Panel API SDK for PHP (For Pterodactyl 0.7.x), a forked version from @FruitBytes.
+Pterodactyl Panel API SDK for PHP (For Pterodactyl 0.7.x), a forked version from [@FruitBytes](https://github.com/FruitBytes).
 
 ## Quick start
 

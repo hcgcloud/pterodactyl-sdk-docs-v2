@@ -3,7 +3,9 @@ Get the collection of servers.
 
 ## Usage
 ``` php
-$pterodactyl->servers();
+<?php
+	$pterodactyl->servers();
+?>
 ```
 
 ## Parameters

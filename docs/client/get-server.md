@@ -3,7 +3,9 @@ Get the details of a given server.
 
 ## Usage
 ``` php
-$pterodactyl->getServer($serverIdentifier);
+<?php
+	$pterodactyl->getServer($serverIdentifier);
+?>
 ```
 
 ## Parameters
@@ -16,6 +18,8 @@ $pterodactyl->getServer($serverIdentifier);
 | serverIdentifier | The `identifier` of the server | |
 
 ## Returns
+
+Returns a `server instance`.
 
 !!! note
     `id`, `externalId`, `node`, `suspended`, `pack`, `createdAt`, `updatedAt` will be always `null`, as they're not available with Account API.
