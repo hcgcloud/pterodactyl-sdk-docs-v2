@@ -3,7 +3,9 @@ Get a server instance, including it's allocations.
 
 ## Usage
 ``` php
-$pterodactyl->server($serverId);
+<?php
+	$pterodactyl->server($serverId);
+?>
 ```
 
 ## Parameters
@@ -16,6 +18,8 @@ $pterodactyl->server($serverId);
 | serverId | The `id` of the server | |
 
 ## Returns
+
+Returns a `server instance`.
 
 ``` json
 {

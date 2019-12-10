@@ -3,7 +3,9 @@ Get the utilization of a given server.
 
 ## Usage
 ``` php
-$pterodactyl->utilizationServer($serverIdentifier);
+<?php
+	$pterodactyl->utilizationServer($serverIdentifier);
+?>
 ```
 
 ## Parameters

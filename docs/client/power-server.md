@@ -3,7 +3,12 @@ Toggle the power on a given server.
 
 ## Usage
 ``` php
-$pterodactyl->powerServer($serverIdentifier, $action);
+<?php
+	$pterodactyl->powerServer($serverIdentifier, $action);
+
+	//For a server instance
+	$server->power($action);
+?>
 ```
 
 ## Parameters

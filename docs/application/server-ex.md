@@ -3,7 +3,9 @@ Get a server instance by external id, including it's allocations.
 
 ## Usage
 ``` php
-$pterodactyl->serverEx($externalId);
+<?php
+	$pterodactyl->serverEx($externalId);
+?>
 ```
 
 ## Parameters
@@ -16,6 +18,8 @@ $pterodactyl->serverEx($externalId);
 | externalId | The `externalId` of the server | |
 
 ## Returns
+
+Returns a `server instance`.
 
 ``` json
 {
