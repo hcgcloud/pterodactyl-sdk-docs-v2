@@ -60,4 +60,4 @@ You may also retrieve a single server using:
 $server = $pterodactyl->server(SERVER_ID_HERE);
 ```
 
-For other functions, you can find them from the navigation.
+**For other functions, you can find them from the navigation.**
