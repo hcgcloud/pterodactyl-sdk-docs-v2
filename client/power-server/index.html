@@ -31,21 +31,21 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
     
     
       
-        <title>Pterodactyl PHP SDK</title>
+        <title>Power server - Pterodactyl PHP SDK</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
       
     
     
-      <script src="/assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -54,7 +54,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="/assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -77,12 +77,16 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#power-server-with-account-api" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="/." title="Pterodactyl PHP SDK" class="md-header-nav__button md-logo">
+        <a href="../.." title="Pterodactyl PHP SDK" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -99,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                
+                Power server
               
             </span>
           
@@ -167,7 +171,9 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -176,7 +182,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           Home
         </a>
       
@@ -189,7 +195,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/client/list-servers/" class="md-tabs__link">
+        <a href="../list-servers/" class="md-tabs__link md-tabs__link--active">
           Client
         </a>
       
@@ -206,7 +212,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/application/servers/" class="md-tabs__link">
+        <a href="../../application/servers/" class="md-tabs__link">
           Application
         </a>
       
@@ -229,7 +235,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="/." title="Pterodactyl PHP SDK" class="md-nav__button md-logo">
+    <a href="../.." title="Pterodactyl PHP SDK" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -284,7 +290,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/." title="Welcome" class="md-nav__link">
+    <a href="../.." title="Welcome" class="md-nav__link">
       Welcome
     </a>
   </li>
@@ -296,7 +302,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/getting-started/" title="Getting Started" class="md-nav__link">
+    <a href="../../getting-started/" title="Getting Started" class="md-nav__link">
       Getting Started
     </a>
   </li>
@@ -308,7 +314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/exceptions/" title="Exceptions" class="md-nav__link">
+    <a href="../../exceptions/" title="Exceptions" class="md-nav__link">
       Exceptions
     </a>
   </li>
@@ -323,10 +329,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Client
@@ -344,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/client/list-servers/" title="List servers" class="md-nav__link">
+    <a href="../list-servers/" title="List servers" class="md-nav__link">
       List servers
     </a>
   </li>
@@ -356,7 +364,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/client/get-server/" title="Get server" class="md-nav__link">
+    <a href="../get-server/" title="Get server" class="md-nav__link">
       Get server
     </a>
   </li>
@@ -366,11 +374,70 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/client/power-server/" title="Power server" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Power server
+      </label>
+    
+    <a href="./" title="Power server" class="md-nav__link md-nav__link--active">
       Power server
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -380,7 +447,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/client/command-server/" title="Command server" class="md-nav__link">
+    <a href="../command-server/" title="Command server" class="md-nav__link">
       Command server
     </a>
   </li>
@@ -392,7 +459,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/client/utilization-server/" title="Utilization server" class="md-nav__link">
+    <a href="../utilization-server/" title="Utilization server" class="md-nav__link">
       Utilization server
     </a>
   </li>
@@ -447,7 +514,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/servers/" title="List servers" class="md-nav__link">
+    <a href="../../application/servers/" title="List servers" class="md-nav__link">
       List servers
     </a>
   </li>
@@ -459,7 +526,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/server/" title="Get server" class="md-nav__link">
+    <a href="../../application/server/" title="Get server" class="md-nav__link">
       Get server
     </a>
   </li>
@@ -471,7 +538,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/server-ex.md" title="Get server by external id" class="md-nav__link">
+    <a href="../../application/server-ex.md" title="Get server by external id" class="md-nav__link">
       Get server by external id
     </a>
   </li>
@@ -483,7 +550,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/create-server.md" title="Create server" class="md-nav__link">
+    <a href="../../application/create-server.md" title="Create server" class="md-nav__link">
       Create server
     </a>
   </li>
@@ -495,7 +562,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/delete-server.md" title="Delete server" class="md-nav__link">
+    <a href="../../application/delete-server.md" title="Delete server" class="md-nav__link">
       Delete server
     </a>
   </li>
@@ -507,7 +574,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/force-delete-server.md" title="Force delete server" class="md-nav__link">
+    <a href="../../application/force-delete-server.md" title="Force delete server" class="md-nav__link">
       Force delete server
     </a>
   </li>
@@ -519,7 +586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/suspend-server.md" title="Suspend server" class="md-nav__link">
+    <a href="../../application/suspend-server.md" title="Suspend server" class="md-nav__link">
       Suspend server
     </a>
   </li>
@@ -531,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/unsuspend-server.md" title="Unsuspend server" class="md-nav__link">
+    <a href="../../application/unsuspend-server.md" title="Unsuspend server" class="md-nav__link">
       Unsuspend server
     </a>
   </li>
@@ -543,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/reinstall-server.md" title="Reinstall server" class="md-nav__link">
+    <a href="../../application/reinstall-server.md" title="Reinstall server" class="md-nav__link">
       Reinstall server
     </a>
   </li>
@@ -555,7 +622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/rebuild-server.md" title="Rebuild server" class="md-nav__link">
+    <a href="../../application/rebuild-server.md" title="Rebuild server" class="md-nav__link">
       Rebuild server
     </a>
   </li>
@@ -567,7 +634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/update-server-details.md" title="Update server details" class="md-nav__link">
+    <a href="../../application/update-server-details.md" title="Update server details" class="md-nav__link">
       Update server details
     </a>
   </li>
@@ -579,7 +646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/update-server-build.md" title="Update server build" class="md-nav__link">
+    <a href="../../application/update-server-build.md" title="Update server build" class="md-nav__link">
       Update server build
     </a>
   </li>
@@ -591,7 +658,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/application/update-server-startup.md" title="Update server startuo" class="md-nav__link">
+    <a href="../../application/update-server-startup.md" title="Update server startuo" class="md-nav__link">
       Update server startuo
     </a>
   </li>
@@ -614,12 +681,126 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns" class="md-nav__link">
+    Returns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/hcgcloud/pterodactyl-sdk-docs/edit/master/docs/client/power-server.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="power-server-with-account-api">Power Server <small>with Account API</small><a class="headerlink" href="#power-server-with-account-api" title="Permanent link">&para;</a></h1>
+<p>Toggle the power on a given server.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="x">$pterodactyl-&gt;powerServer($serverIdentifier, $action);</span>
+</pre></div>
 
+
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>serverIdentifier</code> is the <code>identifier</code> of the server, not <code>id</code>, <code>externalId</code> or <code>uuid</code>.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>serverIdentifier</td>
+<td>The <code>identifier</code> of the server</td>
+<td></td>
+</tr>
+<tr>
+<td>action</td>
+<td>The action you want to send</td>
+<td>in:start,stop,restart,kill</td>
+</tr>
+</tbody>
+</table>
+<h2 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h2>
+<p><strong>None</strong></p>
+<p>Throwing exception if failed.</p>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">powerServer</span><span class="p">(</span><span class="s1">&#39;76c59598&#39;</span><span class="p">,</span> <span class="s1">&#39;restart&#39;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+        <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="nv">$server</span> <span class="o">=</span> <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">getServer</span><span class="p">(</span><span class="s1">&#39;76c59598&#39;</span><span class="p">);</span>
+        <span class="nv">$server</span><span class="o">-&gt;</span><span class="na">power</span><span class="p">(</span><span class="s1">&#39;restart&#39;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">Exception</span> <span class="nv">$e</span><span class="p">){</span>
+        <span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+                
+                  
+                
+              
               
                 
 
@@ -632,6 +813,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../get-server/" title="Get server" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Get server
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../command-server/" title="Command server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Command server
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -650,9 +866,9 @@
       
     </div>
     
-      <script src="/assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../assets/javascripts/application.8e03edeb.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"/"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
   </body>
