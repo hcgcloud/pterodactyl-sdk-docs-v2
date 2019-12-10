@@ -746,14 +746,14 @@
                 <h1 id="get-server-by-external-id-with-application-api">Get Server by External Id <small>with Application API</small><a class="headerlink" href="#get-server-by-external-id-with-application-api" title="Permanent link">&para;</a></h1>
 <p>Get a server instance by external id, including it's allocations.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="x">$pterodactyl-&gt;serverEx($serverId);</span>
+<div class="codehilite"><pre><span></span><span class="x">$pterodactyl-&gt;serverEx($externalId);</span>
 </pre></div>
 
 
 <h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <code>serverId</code> is the <code>externalId</code> of the server, not <code>identifier</code>, <code>id</code> or <code>uuid</code>.</p>
+<p>The <code>externalId</code> is the <code>externalId</code> of the server, not <code>identifier</code>, <code>id</code> or <code>uuid</code>.</p>
 </div>
 <table>
 <thead>
@@ -765,7 +765,7 @@
 </thead>
 <tbody>
 <tr>
-<td>serverId</td>
+<td>externalId</td>
 <td>The <code>externalId</code> of the server</td>
 <td></td>
 </tr>
