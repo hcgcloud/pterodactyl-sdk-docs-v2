@@ -13,6 +13,7 @@ nav:
   - 'Home':
     - 'Welcome': index.md
     - 'Getting Started': getting-started.md
+    - 'Resources': resources.md
     - 'Exceptions': exceptions.md
   - 'Client':
     - 'List servers': client/list-servers.md
