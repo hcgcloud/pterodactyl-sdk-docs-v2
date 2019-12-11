@@ -32,7 +32,11 @@ $pterodactyl = new Pterodactyl(API_KEY_HERE, BASE_URI_HERE);
 ### Type of API
 Before using other apis, you should know the difference between `Account API` and `Application API`.
 
-#### Account API <small>(We call Client API in this docs)</small>
+#### Account API
+
+!!! note
+    You can find functions available for Account API in the `client` tab of the navigation.
+
 Account API is for a single user of your panel, it can perform like `Send console command` and `Send power action` while Application API can't.
 
 You can generate a key for an administrator account, then you can have the rights to control all servers.
