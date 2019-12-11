@@ -32,7 +32,7 @@ Throwing exception if failed.
 <?php
 	try {
 		$pterodactyl->powerServer('76c59598', 'restart');
-	} catch(Exception $e){
+	} catch(\Exception $e){
 		print_r($e->getMessage());
 	}
 ?>
@@ -43,7 +43,7 @@ Throwing exception if failed.
 	try {
 		$server = $pterodactyl->getServer('76c59598');
 		$server->power('restart');
-	} catch(Exception $e){
+	} catch(\Exception $e){
 		print_r($e->getMessage());
 	}
 ?>
