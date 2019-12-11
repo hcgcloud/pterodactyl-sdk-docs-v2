@@ -12,6 +12,11 @@ Create a new server.
 
 | Parameter | Description | Rules |
 | - | - | - |
+| data | The data to create server | |
+ 
+### data
+| Parameter | Description | Rules |
+| - | - | - |
 | external_id |  External id | sometimes&#124;nullable&#124;string&#124;between:1,191&#124;unique:servers |
 | name |  Name | required&#124;string&#124;min:1&#124;max:255 |
 | user | Server owner's user id | required&#124;integer&#124;exists:users,id |
