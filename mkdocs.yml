@@ -36,6 +36,27 @@ nav:
       - 'Update server details': application/server/update-server-details.md
       - 'Update server build': application/server/update-server-build.md
       - 'Update server startup': application/server/update-server-startup.md
+    - 'User':
+      - 'List users': application/user/users.md
+      - 'Get user': application/user/user.md
+      - 'Get user by external id': application/user/user-ex.md
+      - 'Create user': application/user/create-user.md
+      - 'Update user': application/user/update-user.md
+      - 'Delete user': application/user/delete-user.md
+    - 'Node':
+      - 'List nodes': application/node/nodes.md
+      - 'Get node': application/node/node.md
+      - 'Create node': application/node/create-node.md
+      - 'Update node': application/node/update-node.md
+      - 'Delete node': application/node/delete-node.md
+    - 'Allocation':
+      - 'List allocations': application/allocation/allocations.md
+    - 'Nest':
+      - 'List nests': application/nest/nests.md
+      - 'Get nest': application/nest/nest.md
+    - 'Egg':
+      - 'List eggs': application/egg/eggs.md
+      - 'Get egg': application/egg/egg.md
 
 markdown_extensions:
   - admonition
