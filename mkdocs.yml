@@ -41,6 +41,11 @@ nav:
       - 'Update server details': application/server/update-server-details.md
       - 'Update server build': application/server/update-server-build.md
       - 'Update server startup': application/server/update-server-startup.md
+      - 'List server databases': application/server/server-databases.md
+      - 'Get server database': application/server/server-database.md
+      - 'Create server database': application/server/create-server-database.md
+      - 'Reset server database password': application/server/reset-server-database-password.md
+      - 'Delete server database': application\server\delete-server-database.md
     - 'User':
       - 'List users': application/user/users.md
       - 'Get user': application/user/user.md
@@ -48,6 +53,12 @@ nav:
       - 'Create user': application/user/create-user.md
       - 'Update user': application/user/update-user.md
       - 'Delete user': application/user/delete-user.md
+    - 'Location':
+      - 'Get locations': application/location/locations.md
+      - 'Get location': application/location/location.md
+      - 'Create location': application/location/create-location.md
+      - 'Update location': application/location/update-location.md
+      - 'Delete location': application/location/delete-location.md
     - 'Node':
       - 'List nodes': application/node/nodes.md
       - 'Get node': application/node/node.md
@@ -56,6 +67,8 @@ nav:
       - 'Delete node': application/node/delete-node.md
     - 'Allocation':
       - 'List allocations': application/allocation/allocations.md
+      - 'Create allocation': application/allocation/create-allocation.md
+      - 'Delete allocation': application/allocation/delete-allocation.md
     - 'Nest':
       - 'List nests': application/nest/nests.md
       - 'Get nest': application/nest/nest.md
