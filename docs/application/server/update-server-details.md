@@ -44,7 +44,7 @@ Throwing exception if failed.
 			'user' => 1,
 			'description' => 'mynewdescription'
 		]);
-	} catch(Exception $e){
+	} catch(\Exception $e){
 		print_r($e->getMessage());
 	}
 ?>
@@ -59,7 +59,7 @@ Throwing exception if failed.
 			'user' => 1,
 			'description' => 'mynewdescription'
 		]);
-	} catch(Exception $e){
+	} catch(\Exception $e){
 		print_r($e->getMessage());
 	}
 ?>

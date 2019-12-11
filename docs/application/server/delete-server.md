@@ -31,7 +31,7 @@ Throwing exception if failed.
 <?php
 	try {
 		$pterodactyl->deleteServer(14);
-	} catch(Exception $e){
+	} catch(\Exception $e){
 		print_r($e->getMessage());
 	}
 ?>
@@ -42,7 +42,7 @@ Throwing exception if failed.
 	try {
 		$server = $pterodactyl->server(14);
 		$server->delete();
-	} catch(Exception $e){
+	} catch(\Exception $e){
 		print_r($e->getMessage());
 	}
 ?>
