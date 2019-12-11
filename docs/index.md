@@ -1,5 +1,10 @@
 # Pterodactyl PHP SDK
 
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Total Downloads][ico-downloads]][link-downloads]
+[![Software License][ico-license]](https://github.com/hcgcloud/pterodactyl-sdk/blob/master/LICENSE.md)
+[![Chat on Discord][ico-chat]][link-chat]
+
 Pterodactyl Panel API SDK for PHP (For Pterodactyl 0.7.x), a forked version from [@FruitBytes](https://github.com/FruitBytes).
 
 ## Quick start
@@ -40,3 +45,12 @@ As a third-party API wrapper, We recommend you not asking for help elsewhere, or
 
 `hcgcloud/pterodactyl-sdk` is licensed under the MIT License (MIT). Please see the
 [license file](https://github.com/hcgcloud/pterodactyl-sdk/blob/master/LICENSE.md) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/hcgcloud/pterodactyl-sdk.svg
+[ico-license]: https://img.shields.io/badge/license-MIT-green.svg
+[ico-downloads]: https://img.shields.io/packagist/dt/hcgcloud/pterodactyl-sdk.svg
+[ico-chat]: https://img.shields.io/discord/609764930899673092
+
+[link-packagist]: https://packagist.org/packages/hcgcloud/pterodactyl-sdk
+[link-downloads]: https://packagist.org/packages/hcgcloud/pterodactyl-sdk
+[link-chat]: https://discord.gg/5KnNVfv
