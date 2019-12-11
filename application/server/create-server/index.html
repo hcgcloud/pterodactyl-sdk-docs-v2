@@ -1,1535 +1,189 @@
-
-
-
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      
-      
-      
-      
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
-      
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
-      
-        <meta name="lang:search.language" content="en">
-      
-        <meta name="lang:search.pipeline.stopwords" content="True">
-      
-        <meta name="lang:search.pipeline.trimmer" content="True">
-      
-        <meta name="lang:search.result.none" content="No matching documents">
-      
-        <meta name="lang:search.result.one" content="1 matching document">
-      
-        <meta name="lang:search.result.other" content="# matching documents">
-      
-        <meta name="lang:search.tokenizer" content="[\s\-]+">
-      
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
-    
-    
-      
-        <title>Create server - Pterodactyl PHP SDK</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/application.1b62728e.css">
-      
-      
-    
-    
-      <script src="../../../assets/javascripts/modernizr.268332fc.js"></script>
-    
-    
-      
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-      
-    
-    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
-    
-    
-    
-      
-    
-    
-  </head>
-  
-    <body dir="ltr">
-  
-    <svg class="md-svg">
-      <defs>
-        
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
-        
-      </defs>
-    </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-    
-      <a href="#create-server-with-application-api" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
-    
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../../.." title="Pterodactyl PHP SDK" class="md-header-nav__button md-logo">
-          
-            <i class="md-icon"></i>
-          
-        </a>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
-      </div>
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-          
-            <span class="md-header-nav__topic">
-              Pterodactyl PHP SDK
-            </span>
-            <span class="md-header-nav__topic">
-              
-                Create server
-              
-            </span>
-          
-        </div>
-      </div>
-      <div class="md-flex__cell md-flex__cell--shrink">
-        
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-          
-<div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
-      <label class="md-icon md-search__icon" for="__search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
-        &#xE5CD;
-      </button>
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="result">
-          <div class="md-search-result__meta">
-            Type to start searching
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-        
-      </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://github.com/hcgcloud/pterodactyl-sdk/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
-  <div class="md-source__repository">
-    hcgcloud/pterodactyl-sdk
-  </div>
-</a>
-          </div>
-        </div>
-      
-    </div>
-  </nav>
-</header>
-    
-    <div class="md-container">
-      
-        
-      
-      
-        
-
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../.." class="md-tabs__link">
-          Home
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../../../client/list-servers/" class="md-tabs__link">
-          Client
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    
-    
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../servers/" class="md-tabs__link md-tabs__link--active">
-          Application
-        </a>
-      
-    </li>
-  
-
-  
-
-      
-    </ul>
-  </div>
-</nav>
-      
-      <main class="md-main" role="main">
-        <div class="md-main__inner md-grid" data-md-component="container">
-          
-            
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../../.." title="Pterodactyl PHP SDK" class="md-nav__button md-logo">
-      
-        <i class="md-icon"></i>
-      
-    </a>
-    Pterodactyl PHP SDK
-  </label>
-  
-    <div class="md-nav__source">
-      
-
-
-  
-
-<a href="https://github.com/hcgcloud/pterodactyl-sdk/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
-  <div class="md-source__repository">
-    hcgcloud/pterodactyl-sdk
-  </div>
-</a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
-    
-    <label class="md-nav__link" for="nav-1">
-      Home
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-1">
-        Home
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../.." title="Welcome" class="md-nav__link">
-      Welcome
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../getting-started/" title="Getting Started" class="md-nav__link">
-      Getting Started
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../resources/" title="Resources" class="md-nav__link">
-      Resources
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../exceptions/" title="Exceptions" class="md-nav__link">
-      Exceptions
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
-    <label class="md-nav__link" for="nav-2">
-      Client
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Client
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../client/list-servers/" title="List servers" class="md-nav__link">
-      List servers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../client/get-server/" title="Get server" class="md-nav__link">
-      Get server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../client/power-server/" title="Power server" class="md-nav__link">
-      Power server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../client/command-server/" title="Command server" class="md-nav__link">
-      Command server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../client/utilization-server/" title="Utilization server" class="md-nav__link">
-      Utilization server
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      Application
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Application
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
-    
-    <label class="md-nav__link" for="nav-3-1">
-      Server
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-1">
-        Server
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../servers/" title="List servers" class="md-nav__link">
-      List servers
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../server/" title="Get server" class="md-nav__link">
-      Get server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../server-ex/" title="Get server by external id" class="md-nav__link">
-      Get server by external id
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Create server
-      </label>
-    
-    <a href="./" title="Create server" class="md-nav__link md-nav__link--active">
-      Create server
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    Parameters
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    data
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    Returns
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../delete-server/" title="Delete server" class="md-nav__link">
-      Delete server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../force-delete-server/" title="Force delete server" class="md-nav__link">
-      Force delete server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../suspend-server/" title="Suspend server" class="md-nav__link">
-      Suspend server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../unsuspend-server/" title="Unsuspend server" class="md-nav__link">
-      Unsuspend server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../reinstall-server/" title="Reinstall server" class="md-nav__link">
-      Reinstall server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../rebuild-server/" title="Rebuild server" class="md-nav__link">
-      Rebuild server
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../update-server-details/" title="Update server details" class="md-nav__link">
-      Update server details
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../update-server-build.md" title="Update server build" class="md-nav__link">
-      Update server build
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../update-server-startup.md" title="Update server startup" class="md-nav__link">
-      Update server startup
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
-    
-    <label class="md-nav__link" for="nav-3-2">
-      User
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-2">
-        User
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/users.md" title="List users" class="md-nav__link">
-      List users
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/user.md" title="Get user" class="md-nav__link">
-      Get user
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/user-ex.md" title="Get user by external id" class="md-nav__link">
-      Get user by external id
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/create-user.md" title="Create user" class="md-nav__link">
-      Create user
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/update-user.md" title="Update user" class="md-nav__link">
-      Update user
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../user/delete-user.md" title="Delete user" class="md-nav__link">
-      Delete user
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
-    
-    <label class="md-nav__link" for="nav-3-3">
-      Node
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
-        Node
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../node/nodes.md" title="List nodes" class="md-nav__link">
-      List nodes
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../node/node.md" title="Get node" class="md-nav__link">
-      Get node
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../node/create-node.md" title="Create node" class="md-nav__link">
-      Create node
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../node/update-node.md" title="Update node" class="md-nav__link">
-      Update node
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../node/delete-node.md" title="Delete node" class="md-nav__link">
-      Delete node
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
-    <label class="md-nav__link" for="nav-3-4">
-      Allocation
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        Allocation
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../allocation/allocations.md" title="List allocations" class="md-nav__link">
-      List allocations
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
-    
-    <label class="md-nav__link" for="nav-3-5">
-      Nest
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-5">
-        Nest
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/nests.md" title="List nests" class="md-nav__link">
-      List nests
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../nest/nest.md" title="Get nest" class="md-nav__link">
-      Get nest
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
-    
-    <label class="md-nav__link" for="nav-3-6">
-      Egg
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-6">
-        Egg
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../egg/eggs.md" title="List eggs" class="md-nav__link">
-      List eggs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../egg/egg.md" title="Get egg" class="md-nav__link">
-      Get egg
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    Parameters
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    data
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    Returns
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
-              
-                
-                  <a href="https://github.com/hcgcloud/pterodactyl-sdk-docs/edit/master/docs/application/server/create-server.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
-                
-                
-                <h1 id="create-server-with-application-api">Create Server <small>with Application API</small><a class="headerlink" href="#create-server-with-application-api" title="Permanent link">&para;</a></h1>
-<p>Create a new server.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
-    <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">createServer</span><span class="p">(</span><span class="k">array</span> <span class="nv">$data</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</pre></div>
-
-
-<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Rules</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data</td>
-<td>The data to create server</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id="data">data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-<th>Rules</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>external_id</td>
-<td>External id</td>
-<td>sometimes&#124;nullable&#124;string&#124;between:1,191&#124;unique:servers</td>
-</tr>
-<tr>
-<td>name</td>
-<td>Name</td>
-<td>required&#124;string&#124;min:1&#124;max:255</td>
-</tr>
-<tr>
-<td>user</td>
-<td>Server owner's user id</td>
-<td>required&#124;integer&#124;exists:users,id</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Description</td>
-<td>sometimes&#124;string</td>
-</tr>
-<tr>
-<td>egg</td>
-<td>Egg id</td>
-<td>required&#124;exists:eggs,id</td>
-</tr>
-<tr>
-<td>pack</td>
-<td>Pack id</td>
-<td>sometimes&#124;nullable&#124;numeric&#124;min:0</td>
-</tr>
-<tr>
-<td>docker_image</td>
-<td>Docker image</td>
-<td>sometimes&#124;string&#124;max:255</td>
-</tr>
-<tr>
-<td>startup</td>
-<td>Startup command</td>
-<td>required&#124;string</td>
-</tr>
-<tr>
-<td>limits</td>
-<td>Limits</td>
-<td>required&#124;array</td>
-</tr>
-<tr>
-<td>limits.memory</td>
-<td>Memory limit</td>
-<td>required&#124;numeric&#124;min:0</td>
-</tr>
-<tr>
-<td>limits.swap</td>
-<td>Swap limit</td>
-<td>required&#124;numeric&#124;min:-1</td>
-</tr>
-<tr>
-<td>limits.disk</td>
-<td>Disk limit</td>
-<td>required&#124;numeric&#124;min:0</td>
-</tr>
-<tr>
-<td>limits.io</td>
-<td>IO limit</td>
-<td>required&#124;numeric&#124;between:10,1000</td>
-</tr>
-<tr>
-<td>limits.cpu</td>
-<td>CPU limit</td>
-<td>required&#124;numeric&#124;min:0</td>
-</tr>
-<tr>
-<td>feature_limits</td>
-<td>Feature limits</td>
-<td>required&#124;array</td>
-</tr>
-<tr>
-<td>feature_limits.databases</td>
-<td>Database limit</td>
-<td>present&#124;nullable&#124;integer&#124;min:0</td>
-</tr>
-<tr>
-<td>feature_limits.allocations</td>
-<td>Allocation limit</td>
-<td>present&#124;nullable&#124;integer&#124;min:0</td>
-</tr>
-<tr>
-<td>environment</td>
-<td>Environment variables of the eggs</td>
-<td>present&#124;array</td>
-</tr>
-<tr>
-<td>allocation</td>
-<td>Allocation ids</td>
-<td>sometimes&#124;array</td>
-</tr>
-<tr>
-<td>allocation.default</td>
-<td>Default allocation id</td>
-<td>sometimes&#124;bail&#124;unique:servers&#124;exists:allocations,id</td>
-</tr>
-<tr>
-<td>allocation.additional</td>
-<td>Additional allocation ids</td>
-<td>sometimes&#124;array</td>
-</tr>
-<tr>
-<td>allocation.additional.*</td>
-<td>Additional allocation id</td>
-<td>exists:allocations,id</td>
-</tr>
-<tr>
-<td>deploy</td>
-<td>Deploy information</td>
-<td>sometimes&#124;required&#124;array</td>
-</tr>
-<tr>
-<td>deploy.locations</td>
-<td>Deploy locations</td>
-<td>array</td>
-</tr>
-<tr>
-<td>deploy.locations.*</td>
-<td>Deploy location</td>
-<td>integer&#124;min:1</td>
-</tr>
-<tr>
-<td>deploy.dedicated_ip</td>
-<td>Use dedicated ip or not</td>
-<td>required_with:deploy,boolean</td>
-</tr>
-<tr>
-<td>deploy.port_range</td>
-<td>Port ranges</td>
-<td>array</td>
-</tr>
-<tr>
-<td>deploy.port_range.*</td>
-<td>Port range</td>
-<td>string</td>
-</tr>
-<tr>
-<td>start_on_completion</td>
-<td>Start server after finished installation or not</td>
-<td>sometimes&#124;boolean</td>
-</tr>
-<tr>
-<td>skip_scripts</td>
-<td>Skip egg scripts or not</td>
-<td>sometimes&#124;boolean</td>
-</tr>
-<tr>
-<td>oom_disabled</td>
-<td>Disable oom killer or not</td>
-<td>sometimes&#124;boolean</td>
-</tr>
-</tbody>
-</table>
-<h2 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h2>
-<p>Returns a <code>server instance</code>.</p>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
-    <span class="nt">&quot;externalId&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
-    <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;server1&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;suspended&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&quot;pack&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-01-23T04:38:09+00:00&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-08-05T09:36:13+00:00&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
-        <span class="nt">&quot;external_id&quot;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
-        <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;server1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;suspended&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
-            <span class="nt">&quot;swap&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;disk&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
-            <span class="nt">&quot;io&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
-            <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">0</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;feature_limits&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="mi">0</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;node&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;allocation&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
-        <span class="nt">&quot;nest&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-        <span class="nt">&quot;egg&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-        <span class="nt">&quot;pack&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;startup_command&quot;</span><span class="p">:</span> <span class="s2">&quot;.\/Jcmp-Server&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;hcgcloud\/pterodactyl-jc2mp:latest&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;installed&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nt">&quot;environment&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;SERVER_AUTOUPDATE&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;STARTUP&quot;</span><span class="p">:</span> <span class="s2">&quot;.\/Jcmp-Server&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;P_SERVER_LOCATION&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;P_SERVER_UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span>
-            <span class="p">}</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-08-05T09:36:13+00:00&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2019-01-23T04:38:09+00:00&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;list&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                    <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;allocation&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
-                        <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;123.123.123.123&quot;</span><span class="p">,</span>
-                        <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;node-1.pterodactyl.panel&quot;</span><span class="p">,</span>
-                        <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">50053</span><span class="p">,</span>
-                        <span class="nt">&quot;assigned&quot;</span><span class="p">:</span> <span class="kc">true</span>
-                    <span class="p">}</span>
-                <span class="p">}]</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;limits&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span>
-        <span class="nt">&quot;swap&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;disk&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span>
-        <span class="nt">&quot;io&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
-        <span class="nt">&quot;cpu&quot;</span><span class="p">:</span> <span class="mi">0</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="p">[{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
-        <span class="nt">&quot;nodeId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;123.123.123.123&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;ipAlias&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">50053</span><span class="p">,</span>
-        <span class="nt">&quot;serverId&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;createdAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;updatedAt&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
-            <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;123.123.123.123&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;node-1.pterodactyl.panel&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">50053</span><span class="p">,</span>
-            <span class="nt">&quot;assigned&quot;</span><span class="p">:</span> <span class="kc">true</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;allocation&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;node-1.pterodactyl.panel&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;assigned&quot;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">}],</span>
-    <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;server&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;featureLimits&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;databases&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="mi">0</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nt">&quot;allocation&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
-    <span class="nt">&quot;nest&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-    <span class="nt">&quot;egg&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-    <span class="nt">&quot;container&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;startup_command&quot;</span><span class="p">:</span> <span class="s2">&quot;.\/Jcmp-Server&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;hcgcloud\/pterodactyl-jc2mp:latest&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;installed&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&quot;environment&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;SERVER_AUTOUPDATE&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;STARTUP&quot;</span><span class="p">:</span> <span class="s2">&quot;.\/Jcmp-Server&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;P_SERVER_LOCATION&quot;</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;P_SERVER_UUID&quot;</span><span class="p">:</span> <span class="s2">&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span>
-        <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;relationships&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;allocations&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;list&quot;</span><span class="p">,</span>
-            <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[{</span>
-                <span class="nt">&quot;object&quot;</span><span class="p">:</span> <span class="s2">&quot;allocation&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
-                    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
-                    <span class="nt">&quot;ip&quot;</span><span class="p">:</span> <span class="s2">&quot;123.123.123.123&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;alias&quot;</span><span class="p">:</span> <span class="s2">&quot;node-1.pterodactyl.panel&quot;</span><span class="p">,</span>
-                    <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">50053</span><span class="p">,</span>
-                    <span class="nt">&quot;assigned&quot;</span><span class="p">:</span> <span class="kc">true</span>
-                <span class="p">}</span>
-            <span class="p">}]</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
-    <span class="nv">$nest_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="nv">$egg_id</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-    <span class="nv">$location_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="nv">$egg</span> <span class="o">=</span> <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">egg</span><span class="p">(</span><span class="nv">$nest_id</span><span class="p">,</span> <span class="nv">$egg_id</span><span class="p">);</span> <span class="c1">//get docker_image and startup directly from egg</span>
-    <span class="nv">$server</span> <span class="o">=</span> <span class="nv">$pterodactyl</span><span class="o">-&gt;</span><span class="na">createServer</span><span class="p">([</span>
-        <span class="s2">&quot;external_id&quot;</span> <span class="o">=&gt;</span> <span class="s1">&#39;11&#39;</span><span class="p">,</span>
-        <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">,</span>
-        <span class="s2">&quot;user&quot;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&quot;egg&quot;</span> <span class="o">=&gt;</span> <span class="nv">$egg_id</span><span class="p">,</span>
-        <span class="s2">&quot;docker_image&quot;</span> <span class="o">=&gt;</span> <span class="nv">$egg</span><span class="o">-&gt;</span><span class="na">dockerImage</span><span class="p">,</span>
-        <span class="s2">&quot;skip_scripts&quot;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
-        <span class="s2">&quot;environment&quot;</span> <span class="o">=&gt;</span> <span class="p">[],</span>
-        <span class="s2">&quot;limits&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-            <span class="s2">&quot;memory&quot;</span> <span class="o">=&gt;</span> <span class="mi">256</span><span class="p">,</span>
-            <span class="s2">&quot;swap&quot;</span> <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="s2">&quot;disk&quot;</span> <span class="o">=&gt;</span> <span class="mi">1024</span><span class="p">,</span>
-            <span class="s2">&quot;io&quot;</span> <span class="o">=&gt;</span> <span class="mi">500</span><span class="p">,</span>
-            <span class="s2">&quot;cpu&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;feature_limits&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-            <span class="s2">&quot;databases&quot;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="s2">&quot;allocations&quot;</span> <span class="o">=&gt;</span> <span class="mi">2</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;startup&quot;</span> <span class="o">=&gt;</span> <span class="nv">$egg</span><span class="o">-&gt;</span><span class="na">startup</span><span class="p">,</span>
-        <span class="s2">&quot;description&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;deploy&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span>
-            <span class="s2">&quot;locations&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="nv">$location_id</span><span class="p">],</span>
-            <span class="s2">&quot;dedicated_ip&quot;</span> <span class="o">=&gt;</span> <span class="k">false</span><span class="p">,</span>
-            <span class="s2">&quot;port_range&quot;</span> <span class="o">=&gt;</span> <span class="p">[]</span>
-        <span class="p">],</span>
-        <span class="s2">&quot;start_on_completion&quot;</span> <span class="o">=&gt;</span> <span class="k">true</span>
-    <span class="p">]);</span>
-    <span class="nb">print_r</span><span class="p">(</span><span class="nv">$server</span><span class="p">);</span>
-<span class="cp">?&gt;</span><span class="x"></span>
-</pre></div>
-                
-                  
-                
-              
-              
-                
-
-
-              
-            </article>
-          </div>
-        </div>
-      </main>
-      
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../server-ex/" title="Get server by external id" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Get server by external id
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../delete-server/" title="Delete server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Delete server
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
-      </div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    
-      <script src="../../../assets/javascripts/application.8e03edeb.js"></script>
-      
-      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
-      
-    
-  </body>
-</html>
+<!doctype html><html lang=en class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=lang:clipboard.copy content="Copy to clipboard"><meta name=lang:clipboard.copied content="Copied to clipboard"><meta name=lang:search.language content=en><meta name=lang:search.pipeline.stopwords content=True><meta name=lang:search.pipeline.trimmer content=True><meta name=lang:search.result.none content="No matching documents"><meta name=lang:search.result.one content="1 matching document"><meta name=lang:search.result.other content="# matching documents"><meta name=lang:search.tokenizer content=[\s\-]+><link rel="shortcut icon" href=../../../assets/images/favicon.png><meta name=generator content="mkdocs-1.0.4, mkdocs-material-4.5.1"><title>Create server - Pterodactyl PHP SDK</title><link rel=stylesheet href=../../../assets/stylesheets/application.1b62728e.css><script src=../../../assets/javascripts/modernizr.268332fc.js></script><link href=https://fonts.gstatic.com rel=preconnect crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback"><style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style><link rel=stylesheet href=../../../assets/fonts/material-icons.css><link rel=manifest href=../../../manifest.webmanifest><script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-131385947-5", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script><script async src=https://www.google-analytics.com/analytics.js></script></head> <body dir=ltr> <svg class=md-svg> <defs> <svg xmlns=http://www.w3.org/2000/svg width=416 height=448 viewbox="0 0 416 448" id=__github><path fill=currentColor d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg> </defs> </svg> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay data-md-component=overlay for=__drawer></label> <a href=#create-server-with-application-api tabindex=1 class=md-skip> Skip to content </a> <header class=md-header data-md-component=header> <nav class="md-header-nav md-grid"> <div class=md-flex> <div class="md-flex__cell md-flex__cell--shrink"> <a href=../../.. title="Pterodactyl PHP SDK" class="md-header-nav__button md-logo"> <i class=md-icon></i> </a> </div> <div class="md-flex__cell md-flex__cell--shrink"> <label class="md-icon md-icon--menu md-header-nav__button" for=__drawer></label> </div> <div class="md-flex__cell md-flex__cell--stretch"> <div class="md-flex__ellipsis md-header-nav__title" data-md-component=title> <span class=md-header-nav__topic> Pterodactyl PHP SDK </span> <span class=md-header-nav__topic> Create server </span> </div> </div> <div class="md-flex__cell md-flex__cell--shrink"> <label class="md-icon md-icon--search md-header-nav__button" for=__search></label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query placeholder=Search autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=query data-md-state=active> <label class="md-icon md-search__icon" for=__search></label> <button type=reset class="md-icon md-search__icon" data-md-component=reset tabindex=-1> &#xE5CD; </button> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=result> <div class=md-search-result__meta> Type to start searching </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> </div> <div class="md-flex__cell md-flex__cell--shrink"> <div class=md-header-nav__source> <a href=https://github.com/hcgcloud/pterodactyl-sdk/ title="Go to repository" class=md-source data-md-source=github> <div class=md-source__icon> <svg viewbox="0 0 24 24" width=24 height=24> <use xlink:href=#__github width=24 height=24></use> </svg> </div> <div class=md-source__repository> hcgcloud/pterodactyl-sdk </div> </a> </div> </div> </div> </nav> </header> <div class=md-container> <nav class="md-tabs md-tabs--active" data-md-component=tabs> <div class="md-tabs__inner md-grid"> <ul class=md-tabs__list> <li class=md-tabs__item> <a href=../../.. class=md-tabs__link> Home </a> </li> <li class=md-tabs__item> <a href=../../../client/list-servers/ class=md-tabs__link> Client </a> </li> <li class=md-tabs__item> <a href=../servers/ class="md-tabs__link md-tabs__link--active"> Application </a> </li> </ul> </div> </nav> <main class=md-main role=main> <div class="md-main__inner md-grid" data-md-component=container> <div class="md-sidebar md-sidebar--primary" data-md-component=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" data-md-level=0> <label class="md-nav__title md-nav__title--site" for=__drawer> <a href=../../.. title="Pterodactyl PHP SDK" class="md-nav__button md-logo"> <i class=md-icon></i> </a> Pterodactyl PHP SDK </label> <div class=md-nav__source> <a href=https://github.com/hcgcloud/pterodactyl-sdk/ title="Go to repository" class=md-source data-md-source=github> <div class=md-source__icon> <svg viewbox="0 0 24 24" width=24 height=24> <use xlink:href=#__github width=24 height=24></use> </svg> </div> <div class=md-source__repository> hcgcloud/pterodactyl-sdk </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-1 type=checkbox id=nav-1> <label class=md-nav__link for=nav-1> Home </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-1> Home </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../.. title=Welcome class=md-nav__link> Welcome </a> </li> <li class=md-nav__item> <a href=../../../getting-started/ title="Getting Started" class=md-nav__link> Getting Started </a> </li> <li class=md-nav__item> <a href=../../../resources/ title=Resources class=md-nav__link> Resources </a> </li> <li class=md-nav__item> <a href=../../../exceptions/ title=Exceptions class=md-nav__link> Exceptions </a> </li> <li class=md-nav__item> <a href=../../../references/ title=References class=md-nav__link> References </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-2 type=checkbox id=nav-2> <label class=md-nav__link for=nav-2> Client </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-2> Client </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../../client/list-servers/ title="List servers" class=md-nav__link> List servers </a> </li> <li class=md-nav__item> <a href=../../../client/get-server/ title="Get server" class=md-nav__link> Get server </a> </li> <li class=md-nav__item> <a href=../../../client/power-server/ title="Power server" class=md-nav__link> Power server </a> </li> <li class=md-nav__item> <a href=../../../client/command-server/ title="Command server" class=md-nav__link> Command server </a> </li> <li class=md-nav__item> <a href=../../../client/utilization-server/ title="Utilization server" class=md-nav__link> Utilization server </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-3 type=checkbox id=nav-3 checked> <label class=md-nav__link for=nav-3> Application </label> <nav class=md-nav data-md-component=collapsible data-md-level=1> <label class=md-nav__title for=nav-3> Application </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-3-1 type=checkbox id=nav-3-1 checked> <label class=md-nav__link for=nav-3-1> Server </label> <nav class=md-nav data-md-component=collapsible data-md-level=2> <label class=md-nav__title for=nav-3-1> Server </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../servers/ title="List servers" class=md-nav__link> List servers </a> </li> <li class=md-nav__item> <a href=../server/ title="Get server" class=md-nav__link> Get server </a> </li> <li class=md-nav__item> <a href=../server-ex/ title="Get server by external id" class=md-nav__link> Get server by external id </a> </li> <li class="md-nav__item md-nav__item--active"> <input class="md-toggle md-nav__toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Create server </label> <a href=./ title="Create server" class="md-nav__link md-nav__link--active"> Create server </a> <nav class="md-nav md-nav--secondary"> <label class=md-nav__title for=__toc>Table of contents</label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#usage class=md-nav__link> Usage </a> </li> <li class=md-nav__item> <a href=#parameters class=md-nav__link> Parameters </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#data class=md-nav__link> data </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#returns class=md-nav__link> Returns </a> </li> <li class=md-nav__item> <a href=#example class=md-nav__link> Example </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../delete-server/ title="Delete server" class=md-nav__link> Delete server </a> </li> <li class=md-nav__item> <a href=../force-delete-server/ title="Force delete server" class=md-nav__link> Force delete server </a> </li> <li class=md-nav__item> <a href=../suspend-server/ title="Suspend server" class=md-nav__link> Suspend server </a> </li> <li class=md-nav__item> <a href=../unsuspend-server/ title="Unsuspend server" class=md-nav__link> Unsuspend server </a> </li> <li class=md-nav__item> <a href=../reinstall-server/ title="Reinstall server" class=md-nav__link> Reinstall server </a> </li> <li class=md-nav__item> <a href=../rebuild-server/ title="Rebuild server" class=md-nav__link> Rebuild server </a> </li> <li class=md-nav__item> <a href=../update-server-details/ title="Update server details" class=md-nav__link> Update server details </a> </li> <li class=md-nav__item> <a href=../update-server-build.md title="Update server build" class=md-nav__link> Update server build </a> </li> <li class=md-nav__item> <a href=../update-server-startup.md title="Update server startup" class=md-nav__link> Update server startup </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-3-2 type=checkbox id=nav-3-2> <label class=md-nav__link for=nav-3-2> User </label> <nav class=md-nav data-md-component=collapsible data-md-level=2> <label class=md-nav__title for=nav-3-2> User </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../user/users.md title="List users" class=md-nav__link> List users </a> </li> <li class=md-nav__item> <a href=../../user/user.md title="Get user" class=md-nav__link> Get user </a> </li> <li class=md-nav__item> <a href=../../user/user-ex.md title="Get user by external id" class=md-nav__link> Get user by external id </a> </li> <li class=md-nav__item> <a href=../../user/create-user.md title="Create user" class=md-nav__link> Create user </a> </li> <li class=md-nav__item> <a href=../../user/update-user.md title="Update user" class=md-nav__link> Update user </a> </li> <li class=md-nav__item> <a href=../../user/delete-user.md title="Delete user" class=md-nav__link> Delete user </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-3-3 type=checkbox id=nav-3-3> <label class=md-nav__link for=nav-3-3> Node </label> <nav class=md-nav data-md-component=collapsible data-md-level=2> <label class=md-nav__title for=nav-3-3> Node </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../node/nodes.md title="List nodes" class=md-nav__link> List nodes </a> </li> <li class=md-nav__item> <a href=../../node/node.md title="Get node" class=md-nav__link> Get node </a> </li> <li class=md-nav__item> <a href=../../node/create-node.md title="Create node" class=md-nav__link> Create node </a> </li> <li class=md-nav__item> <a href=../../node/update-node.md title="Update node" class=md-nav__link> Update node </a> </li> <li class=md-nav__item> <a href=../../node/delete-node.md title="Delete node" class=md-nav__link> Delete node </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-3-4 type=checkbox id=nav-3-4> <label class=md-nav__link for=nav-3-4> Allocation </label> <nav class=md-nav data-md-component=collapsible data-md-level=2> <label class=md-nav__title for=nav-3-4> Allocation </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../allocation/allocations.md title="List allocations" class=md-nav__link> List allocations </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-3-5 type=checkbox id=nav-3-5> <label class=md-nav__link for=nav-3-5> Nest </label> <nav class=md-nav data-md-component=collapsible data-md-level=2> <label class=md-nav__title for=nav-3-5> Nest </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../nest/nests.md title="List nests" class=md-nav__link> List nests </a> </li> <li class=md-nav__item> <a href=../../nest/nest.md title="Get nest" class=md-nav__link> Get nest </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-toggle md-nav__toggle" data-md-toggle=nav-3-6 type=checkbox id=nav-3-6> <label class=md-nav__link for=nav-3-6> Egg </label> <nav class=md-nav data-md-component=collapsible data-md-level=2> <label class=md-nav__title for=nav-3-6> Egg </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../egg/eggs.md title="List eggs" class=md-nav__link> List eggs </a> </li> <li class=md-nav__item> <a href=../../egg/egg.md title="Get egg" class=md-nav__link> Get egg </a> </li> </ul> </nav> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary"> <label class=md-nav__title for=__toc>Table of contents</label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=#usage class=md-nav__link> Usage </a> </li> <li class=md-nav__item> <a href=#parameters class=md-nav__link> Parameters </a> <nav class=md-nav> <ul class=md-nav__list> <li class=md-nav__item> <a href=#data class=md-nav__link> data </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#returns class=md-nav__link> Returns </a> </li> <li class=md-nav__item> <a href=#example class=md-nav__link> Example </a> </li> </ul> </nav> </div> </div> </div> <div class=md-content> <article class="md-content__inner md-typeset"> <a href=https://github.com/hcgcloud/pterodactyl-sdk-docs/edit/master/docs/application/server/create-server.md title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a> <h1 id=create-server-with-application-api>Create Server <small>with Application API</small><a class=headerlink href=#create-server-with-application-api title="Permanent link">&para;</a></h1> <p>Create a new server.</p> <h2 id=usage>Usage<a class=headerlink href=#usage title="Permanent link">&para;</a></h2> <div class=codehilite><pre><span></span><span class=cp>&lt;?php</span>
+    <span class=nv>$pterodactyl</span><span class=o>-&gt;</span><span class=na>createServer</span><span class=p>(</span><span class=k>array</span> <span class=nv>$data</span><span class=p>);</span>
+<span class=cp>?&gt;</span><span class=x></span>
+</pre></div> <h2 id=parameters>Parameters<a class=headerlink href=#parameters title="Permanent link">&para;</a></h2> <table> <thead> <tr> <th>Parameter</th> <th>Description</th> <th>Rules</th> </tr> </thead> <tbody> <tr> <td>data</td> <td>The data to create server</td> <td></td> </tr> </tbody> </table> <h3 id=data>data<a class=headerlink href=#data title="Permanent link">&para;</a></h3> <table> <thead> <tr> <th>Parameter</th> <th>Description</th> <th>Rules</th> </tr> </thead> <tbody> <tr> <td>external_id</td> <td>External id</td> <td>sometimes&#124;nullable&#124;string&#124;between:1,191&#124;unique:servers</td> </tr> <tr> <td>name</td> <td>Name</td> <td>required&#124;string&#124;min:1&#124;max:255</td> </tr> <tr> <td>user</td> <td>Server owner's user id</td> <td>required&#124;integer&#124;exists:users,id</td> </tr> <tr> <td>description</td> <td>Description</td> <td>sometimes&#124;string</td> </tr> <tr> <td>egg</td> <td>Egg id</td> <td>required&#124;exists:eggs,id</td> </tr> <tr> <td>pack</td> <td>Pack id</td> <td>sometimes&#124;nullable&#124;numeric&#124;min:0</td> </tr> <tr> <td>docker_image</td> <td>Docker image</td> <td>sometimes&#124;string&#124;max:255</td> </tr> <tr> <td>startup</td> <td>Startup command</td> <td>required&#124;string</td> </tr> <tr> <td>limits</td> <td>Limits</td> <td>required&#124;array</td> </tr> <tr> <td>limits.memory</td> <td>Memory limit</td> <td>required&#124;numeric&#124;min:0</td> </tr> <tr> <td>limits.swap</td> <td>Swap limit</td> <td>required&#124;numeric&#124;min:-1</td> </tr> <tr> <td>limits.disk</td> <td>Disk limit</td> <td>required&#124;numeric&#124;min:0</td> </tr> <tr> <td>limits.io</td> <td>IO limit</td> <td>required&#124;numeric&#124;between:10,1000</td> </tr> <tr> <td>limits.cpu</td> <td>CPU limit</td> <td>required&#124;numeric&#124;min:0</td> </tr> <tr> <td>feature_limits</td> <td>Feature limits</td> <td>required&#124;array</td> </tr> <tr> <td>feature_limits.databases</td> <td>Database limit</td> <td>present&#124;nullable&#124;integer&#124;min:0</td> </tr> <tr> <td>feature_limits.allocations</td> <td>Allocation limit</td> <td>present&#124;nullable&#124;integer&#124;min:0</td> </tr> <tr> <td>environment</td> <td>Environment variables of the eggs</td> <td>present&#124;array</td> </tr> <tr> <td>allocation</td> <td>Allocation ids</td> <td>sometimes&#124;array</td> </tr> <tr> <td>allocation.default</td> <td>Default allocation id</td> <td>sometimes&#124;bail&#124;unique:servers&#124;exists:allocations,id</td> </tr> <tr> <td>allocation.additional</td> <td>Additional allocation ids</td> <td>sometimes&#124;array</td> </tr> <tr> <td>allocation.additional.*</td> <td>Additional allocation id</td> <td>exists:allocations,id</td> </tr> <tr> <td>deploy</td> <td>Deploy information</td> <td>sometimes&#124;required&#124;array</td> </tr> <tr> <td>deploy.locations</td> <td>Deploy locations</td> <td>array</td> </tr> <tr> <td>deploy.locations.*</td> <td>Deploy location</td> <td>integer&#124;min:1</td> </tr> <tr> <td>deploy.dedicated_ip</td> <td>Use dedicated ip or not</td> <td>required_with:deploy,boolean</td> </tr> <tr> <td>deploy.port_range</td> <td>Port ranges</td> <td>array</td> </tr> <tr> <td>deploy.port_range.*</td> <td>Port range</td> <td>string</td> </tr> <tr> <td>start_on_completion</td> <td>Start server after finished installation or not</td> <td>sometimes&#124;boolean</td> </tr> <tr> <td>skip_scripts</td> <td>Skip egg scripts or not</td> <td>sometimes&#124;boolean</td> </tr> <tr> <td>oom_disabled</td> <td>Disable oom killer or not</td> <td>sometimes&#124;boolean</td> </tr> </tbody> </table> <h2 id=returns>Returns<a class=headerlink href=#returns title="Permanent link">&para;</a></h2> <p>Returns a <code>server instance</code>.</p> <div class=codehilite><pre><span></span><span class=p>{</span>
+    <span class=nt>&quot;id&quot;</span><span class=p>:</span> <span class=mi>14</span><span class=p>,</span>
+    <span class=nt>&quot;externalId&quot;</span><span class=p>:</span> <span class=mi>11</span><span class=p>,</span>
+    <span class=nt>&quot;uuid&quot;</span><span class=p>:</span> <span class=s2>&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span><span class=p>,</span>
+    <span class=nt>&quot;identifier&quot;</span><span class=p>:</span> <span class=s2>&quot;76c59598&quot;</span><span class=p>,</span>
+    <span class=nt>&quot;node&quot;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
+    <span class=nt>&quot;name&quot;</span><span class=p>:</span> <span class=s2>&quot;server1&quot;</span><span class=p>,</span>
+    <span class=nt>&quot;description&quot;</span><span class=p>:</span> <span class=s2>&quot;&quot;</span><span class=p>,</span>
+    <span class=nt>&quot;suspended&quot;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+    <span class=nt>&quot;pack&quot;</span><span class=p>:</span> <span class=kc>null</span><span class=p>,</span>
+    <span class=nt>&quot;createdAt&quot;</span><span class=p>:</span> <span class=s2>&quot;2019-01-23T04:38:09+00:00&quot;</span><span class=p>,</span>
+    <span class=nt>&quot;updatedAt&quot;</span><span class=p>:</span> <span class=s2>&quot;2019-08-05T09:36:13+00:00&quot;</span><span class=p>,</span>
+    <span class=nt>&quot;attributes&quot;</span><span class=p>:</span> <span class=p>{</span>
+        <span class=nt>&quot;id&quot;</span><span class=p>:</span> <span class=mi>14</span><span class=p>,</span>
+        <span class=nt>&quot;external_id&quot;</span><span class=p>:</span> <span class=mi>11</span><span class=p>,</span>
+        <span class=nt>&quot;uuid&quot;</span><span class=p>:</span> <span class=s2>&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;identifier&quot;</span><span class=p>:</span> <span class=s2>&quot;76c59598&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;name&quot;</span><span class=p>:</span> <span class=s2>&quot;server1&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;description&quot;</span><span class=p>:</span> <span class=s2>&quot;&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;suspended&quot;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&quot;limits&quot;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=nt>&quot;memory&quot;</span><span class=p>:</span> <span class=mi>128</span><span class=p>,</span>
+            <span class=nt>&quot;swap&quot;</span><span class=p>:</span> <span class=mi>0</span><span class=p>,</span>
+            <span class=nt>&quot;disk&quot;</span><span class=p>:</span> <span class=mi>256</span><span class=p>,</span>
+            <span class=nt>&quot;io&quot;</span><span class=p>:</span> <span class=mi>500</span><span class=p>,</span>
+            <span class=nt>&quot;cpu&quot;</span><span class=p>:</span> <span class=mi>0</span>
+        <span class=p>},</span>
+        <span class=nt>&quot;feature_limits&quot;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=nt>&quot;databases&quot;</span><span class=p>:</span> <span class=mi>0</span><span class=p>,</span>
+            <span class=nt>&quot;allocations&quot;</span><span class=p>:</span> <span class=mi>0</span>
+        <span class=p>},</span>
+        <span class=nt>&quot;user&quot;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
+        <span class=nt>&quot;node&quot;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
+        <span class=nt>&quot;allocation&quot;</span><span class=p>:</span> <span class=mi>55</span><span class=p>,</span>
+        <span class=nt>&quot;nest&quot;</span><span class=p>:</span> <span class=mi>8</span><span class=p>,</span>
+        <span class=nt>&quot;egg&quot;</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span>
+        <span class=nt>&quot;pack&quot;</span><span class=p>:</span> <span class=kc>null</span><span class=p>,</span>
+        <span class=nt>&quot;container&quot;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=nt>&quot;startup_command&quot;</span><span class=p>:</span> <span class=s2>&quot;.\/Jcmp-Server&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;image&quot;</span><span class=p>:</span> <span class=s2>&quot;hcgcloud\/pterodactyl-jc2mp:latest&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;installed&quot;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+            <span class=nt>&quot;environment&quot;</span><span class=p>:</span> <span class=p>{</span>
+                <span class=nt>&quot;SERVER_AUTOUPDATE&quot;</span><span class=p>:</span> <span class=s2>&quot;0&quot;</span><span class=p>,</span>
+                <span class=nt>&quot;STARTUP&quot;</span><span class=p>:</span> <span class=s2>&quot;.\/Jcmp-Server&quot;</span><span class=p>,</span>
+                <span class=nt>&quot;P_SERVER_LOCATION&quot;</span><span class=p>:</span> <span class=s2>&quot;test&quot;</span><span class=p>,</span>
+                <span class=nt>&quot;P_SERVER_UUID&quot;</span><span class=p>:</span> <span class=s2>&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span>
+            <span class=p>}</span>
+        <span class=p>},</span>
+        <span class=nt>&quot;updated_at&quot;</span><span class=p>:</span> <span class=s2>&quot;2019-08-05T09:36:13+00:00&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;created_at&quot;</span><span class=p>:</span> <span class=s2>&quot;2019-01-23T04:38:09+00:00&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;relationships&quot;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=nt>&quot;allocations&quot;</span><span class=p>:</span> <span class=p>{</span>
+                <span class=nt>&quot;object&quot;</span><span class=p>:</span> <span class=s2>&quot;list&quot;</span><span class=p>,</span>
+                <span class=nt>&quot;data&quot;</span><span class=p>:</span> <span class=p>[{</span>
+                    <span class=nt>&quot;object&quot;</span><span class=p>:</span> <span class=s2>&quot;allocation&quot;</span><span class=p>,</span>
+                    <span class=nt>&quot;attributes&quot;</span><span class=p>:</span> <span class=p>{</span>
+                        <span class=nt>&quot;id&quot;</span><span class=p>:</span> <span class=mi>55</span><span class=p>,</span>
+                        <span class=nt>&quot;ip&quot;</span><span class=p>:</span> <span class=s2>&quot;123.123.123.123&quot;</span><span class=p>,</span>
+                        <span class=nt>&quot;alias&quot;</span><span class=p>:</span> <span class=s2>&quot;node-1.pterodactyl.panel&quot;</span><span class=p>,</span>
+                        <span class=nt>&quot;port&quot;</span><span class=p>:</span> <span class=mi>50053</span><span class=p>,</span>
+                        <span class=nt>&quot;assigned&quot;</span><span class=p>:</span> <span class=kc>true</span>
+                    <span class=p>}</span>
+                <span class=p>}]</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+    <span class=p>},</span>
+    <span class=nt>&quot;limits&quot;</span><span class=p>:</span> <span class=p>{</span>
+        <span class=nt>&quot;memory&quot;</span><span class=p>:</span> <span class=mi>128</span><span class=p>,</span>
+        <span class=nt>&quot;swap&quot;</span><span class=p>:</span> <span class=mi>0</span><span class=p>,</span>
+        <span class=nt>&quot;disk&quot;</span><span class=p>:</span> <span class=mi>256</span><span class=p>,</span>
+        <span class=nt>&quot;io&quot;</span><span class=p>:</span> <span class=mi>500</span><span class=p>,</span>
+        <span class=nt>&quot;cpu&quot;</span><span class=p>:</span> <span class=mi>0</span>
+    <span class=p>},</span>
+    <span class=nt>&quot;allocations&quot;</span><span class=p>:</span> <span class=p>[{</span>
+        <span class=nt>&quot;id&quot;</span><span class=p>:</span> <span class=mi>55</span><span class=p>,</span>
+        <span class=nt>&quot;nodeId&quot;</span><span class=p>:</span> <span class=kc>null</span><span class=p>,</span>
+        <span class=nt>&quot;ip&quot;</span><span class=p>:</span> <span class=s2>&quot;123.123.123.123&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;ipAlias&quot;</span><span class=p>:</span> <span class=kc>null</span><span class=p>,</span>
+        <span class=nt>&quot;port&quot;</span><span class=p>:</span> <span class=mi>50053</span><span class=p>,</span>
+        <span class=nt>&quot;serverId&quot;</span><span class=p>:</span> <span class=kc>null</span><span class=p>,</span>
+        <span class=nt>&quot;createdAt&quot;</span><span class=p>:</span> <span class=kc>null</span><span class=p>,</span>
+        <span class=nt>&quot;updatedAt&quot;</span><span class=p>:</span> <span class=kc>null</span><span class=p>,</span>
+        <span class=nt>&quot;attributes&quot;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=nt>&quot;id&quot;</span><span class=p>:</span> <span class=mi>55</span><span class=p>,</span>
+            <span class=nt>&quot;ip&quot;</span><span class=p>:</span> <span class=s2>&quot;123.123.123.123&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;alias&quot;</span><span class=p>:</span> <span class=s2>&quot;node-1.pterodactyl.panel&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;port&quot;</span><span class=p>:</span> <span class=mi>50053</span><span class=p>,</span>
+            <span class=nt>&quot;assigned&quot;</span><span class=p>:</span> <span class=kc>true</span>
+        <span class=p>},</span>
+        <span class=nt>&quot;object&quot;</span><span class=p>:</span> <span class=s2>&quot;allocation&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;alias&quot;</span><span class=p>:</span> <span class=s2>&quot;node-1.pterodactyl.panel&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;assigned&quot;</span><span class=p>:</span> <span class=kc>true</span>
+    <span class=p>}],</span>
+    <span class=nt>&quot;object&quot;</span><span class=p>:</span> <span class=s2>&quot;server&quot;</span><span class=p>,</span>
+    <span class=nt>&quot;featureLimits&quot;</span><span class=p>:</span> <span class=p>{</span>
+        <span class=nt>&quot;databases&quot;</span><span class=p>:</span> <span class=mi>0</span><span class=p>,</span>
+        <span class=nt>&quot;allocations&quot;</span><span class=p>:</span> <span class=mi>0</span>
+    <span class=p>},</span>
+    <span class=nt>&quot;user&quot;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
+    <span class=nt>&quot;allocation&quot;</span><span class=p>:</span> <span class=mi>55</span><span class=p>,</span>
+    <span class=nt>&quot;nest&quot;</span><span class=p>:</span> <span class=mi>8</span><span class=p>,</span>
+    <span class=nt>&quot;egg&quot;</span><span class=p>:</span> <span class=mi>20</span><span class=p>,</span>
+    <span class=nt>&quot;container&quot;</span><span class=p>:</span> <span class=p>{</span>
+        <span class=nt>&quot;startup_command&quot;</span><span class=p>:</span> <span class=s2>&quot;.\/Jcmp-Server&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;image&quot;</span><span class=p>:</span> <span class=s2>&quot;hcgcloud\/pterodactyl-jc2mp:latest&quot;</span><span class=p>,</span>
+        <span class=nt>&quot;installed&quot;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&quot;environment&quot;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=nt>&quot;SERVER_AUTOUPDATE&quot;</span><span class=p>:</span> <span class=s2>&quot;0&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;STARTUP&quot;</span><span class=p>:</span> <span class=s2>&quot;.\/Jcmp-Server&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;P_SERVER_LOCATION&quot;</span><span class=p>:</span> <span class=s2>&quot;test&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;P_SERVER_UUID&quot;</span><span class=p>:</span> <span class=s2>&quot;76c59598-22df-4490-92bc-f6fb4a80e0c7&quot;</span>
+        <span class=p>}</span>
+    <span class=p>},</span>
+    <span class=nt>&quot;relationships&quot;</span><span class=p>:</span> <span class=p>{</span>
+        <span class=nt>&quot;allocations&quot;</span><span class=p>:</span> <span class=p>{</span>
+            <span class=nt>&quot;object&quot;</span><span class=p>:</span> <span class=s2>&quot;list&quot;</span><span class=p>,</span>
+            <span class=nt>&quot;data&quot;</span><span class=p>:</span> <span class=p>[{</span>
+                <span class=nt>&quot;object&quot;</span><span class=p>:</span> <span class=s2>&quot;allocation&quot;</span><span class=p>,</span>
+                <span class=nt>&quot;attributes&quot;</span><span class=p>:</span> <span class=p>{</span>
+                    <span class=nt>&quot;id&quot;</span><span class=p>:</span> <span class=mi>55</span><span class=p>,</span>
+                    <span class=nt>&quot;ip&quot;</span><span class=p>:</span> <span class=s2>&quot;123.123.123.123&quot;</span><span class=p>,</span>
+                    <span class=nt>&quot;alias&quot;</span><span class=p>:</span> <span class=s2>&quot;node-1.pterodactyl.panel&quot;</span><span class=p>,</span>
+                    <span class=nt>&quot;port&quot;</span><span class=p>:</span> <span class=mi>50053</span><span class=p>,</span>
+                    <span class=nt>&quot;assigned&quot;</span><span class=p>:</span> <span class=kc>true</span>
+                <span class=p>}</span>
+            <span class=p>}]</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+</pre></div> <h2 id=example>Example<a class=headerlink href=#example title="Permanent link">&para;</a></h2> <div class=codehilite><pre><span></span><span class=cp>&lt;?php</span>
+    <span class=nv>$nest_id</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+    <span class=nv>$egg_id</span> <span class=o>=</span> <span class=mi>5</span><span class=p>;</span>
+    <span class=nv>$location_id</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+    <span class=nv>$egg</span> <span class=o>=</span> <span class=nv>$pterodactyl</span><span class=o>-&gt;</span><span class=na>egg</span><span class=p>(</span><span class=nv>$nest_id</span><span class=p>,</span> <span class=nv>$egg_id</span><span class=p>);</span> <span class=c1>//get docker_image and startup directly from egg</span>
+    <span class=nv>$server</span> <span class=o>=</span> <span class=nv>$pterodactyl</span><span class=o>-&gt;</span><span class=na>createServer</span><span class=p>([</span>
+        <span class=s2>&quot;external_id&quot;</span> <span class=o>=&gt;</span> <span class=s1>&#39;11&#39;</span><span class=p>,</span>
+        <span class=s2>&quot;name&quot;</span> <span class=o>=&gt;</span> <span class=nv>$name</span><span class=p>,</span>
+        <span class=s2>&quot;user&quot;</span> <span class=o>=&gt;</span> <span class=mi>1</span><span class=p>,</span>
+        <span class=s2>&quot;egg&quot;</span> <span class=o>=&gt;</span> <span class=nv>$egg_id</span><span class=p>,</span>
+        <span class=s2>&quot;docker_image&quot;</span> <span class=o>=&gt;</span> <span class=nv>$egg</span><span class=o>-&gt;</span><span class=na>dockerImage</span><span class=p>,</span>
+        <span class=s2>&quot;skip_scripts&quot;</span> <span class=o>=&gt;</span> <span class=k>false</span><span class=p>,</span>
+        <span class=s2>&quot;environment&quot;</span> <span class=o>=&gt;</span> <span class=p>[],</span>
+        <span class=s2>&quot;limits&quot;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+            <span class=s2>&quot;memory&quot;</span> <span class=o>=&gt;</span> <span class=mi>256</span><span class=p>,</span>
+            <span class=s2>&quot;swap&quot;</span> <span class=o>=&gt;</span> <span class=mi>0</span><span class=p>,</span>
+            <span class=s2>&quot;disk&quot;</span> <span class=o>=&gt;</span> <span class=mi>1024</span><span class=p>,</span>
+            <span class=s2>&quot;io&quot;</span> <span class=o>=&gt;</span> <span class=mi>500</span><span class=p>,</span>
+            <span class=s2>&quot;cpu&quot;</span> <span class=o>=&gt;</span> <span class=mi>100</span>
+        <span class=p>],</span>
+        <span class=s2>&quot;feature_limits&quot;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+            <span class=s2>&quot;databases&quot;</span> <span class=o>=&gt;</span> <span class=mi>1</span><span class=p>,</span>
+            <span class=s2>&quot;allocations&quot;</span> <span class=o>=&gt;</span> <span class=mi>2</span>
+        <span class=p>],</span>
+        <span class=s2>&quot;startup&quot;</span> <span class=o>=&gt;</span> <span class=nv>$egg</span><span class=o>-&gt;</span><span class=na>startup</span><span class=p>,</span>
+        <span class=s2>&quot;description&quot;</span> <span class=o>=&gt;</span> <span class=s2>&quot;&quot;</span><span class=p>,</span>
+        <span class=s2>&quot;deploy&quot;</span> <span class=o>=&gt;</span> <span class=p>[</span>
+            <span class=s2>&quot;locations&quot;</span> <span class=o>=&gt;</span> <span class=p>[</span><span class=nv>$location_id</span><span class=p>],</span>
+            <span class=s2>&quot;dedicated_ip&quot;</span> <span class=o>=&gt;</span> <span class=k>false</span><span class=p>,</span>
+            <span class=s2>&quot;port_range&quot;</span> <span class=o>=&gt;</span> <span class=p>[]</span>
+        <span class=p>],</span>
+        <span class=s2>&quot;start_on_completion&quot;</span> <span class=o>=&gt;</span> <span class=k>true</span>
+    <span class=p>]);</span>
+    <span class=nb>print_r</span><span class=p>(</span><span class=nv>$server</span><span class=p>);</span>
+<span class=cp>?&gt;</span><span class=x></span>
+</pre></div> </article> </div> </div> </main> <footer class=md-footer> <div class=md-footer-nav> <nav class="md-footer-nav__inner md-grid"> <a href=../server-ex/ title="Get server by external id" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel=prev> <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i> </div> <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class=md-flex__ellipsis> <span class=md-footer-nav__direction> Previous </span> Get server by external id </span> </div> </a> <a href=../delete-server/ title="Delete server" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel=next> <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"> <span class=md-flex__ellipsis> <span class=md-footer-nav__direction> Next </span> Delete server </span> </div> <div class="md-flex__cell md-flex__cell--shrink"> <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i> </div> </a> </nav> </div> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-footer-copyright> powered by <a href=https://www.mkdocs.org>MkDocs</a> and <a href=https://squidfunk.github.io/mkdocs-material/ > Material for MkDocs</a> </div> <div class=md-footer-social> <link rel=stylesheet href=../../../assets/fonts/font-awesome.css> <a href=https://github.com/hcgcloud class="md-footer-social__link fa fa-github"></a> </div> </div> </div> </footer> </div> <script src=../../../assets/javascripts/application.8e03edeb.js></script> <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script> </body> </html>
