@@ -9,12 +9,17 @@ repo_name: hcgcloud/pterodactyl-sdk
 repo_url: https://github.com/hcgcloud/pterodactyl-sdk
 edit_uri: 'https://github.com/hcgcloud/pterodactyl-sdk-docs/edit/master/docs'
 
-nav:    
+google_analytics: 
+  - 'UA-131385947-5'
+  - 'auto'
+
+nav:
   - 'Home':
     - 'Welcome': index.md
     - 'Getting Started': getting-started.md
     - 'Resources': resources.md
     - 'Exceptions': exceptions.md
+    - 'References': references.md
   - 'Client':
     - 'List servers': client/list-servers.md
     - 'Get server': client/get-server.md
@@ -57,6 +62,17 @@ nav:
     - 'Egg':
       - 'List eggs': application/egg/eggs.md
       - 'Get egg': application/egg/egg.md
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+extra:
+  manifest: 'manifest.webmanifest'
+  social:
+    - type: 'github'
+      link: 'https://github.com/hcgcloud'
 
 markdown_extensions:
   - admonition
