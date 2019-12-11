@@ -18,4 +18,20 @@ This exception is thrown when the request is timeout.
 ## ValidationException
 This exception is thrown when the server returns `422`, the given data failed to pass validation.
 
-*Solution: Check the data you given.*
+### Solution
+
+You can use code like the following to catch exceptions:
+
+```php
+<?php
+	try {
+		$servers = $pterodactyl->createServer([
+			//...
+		]);
+	} catch(\HCGCloud\Pterodactyl\Exceptions\ValidationException $e){
+		print_r($e->errors());
+	}
+?>
+```
+
+By calling `$e->errors()` of a `ValidationException` will return you which parameter failed to pass the validation.
