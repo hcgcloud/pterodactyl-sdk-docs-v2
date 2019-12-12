@@ -201,7 +201,9 @@ Returns a `server instance`.
 		"egg" => $egg_id,
 		"docker_image" => $egg->dockerImage,
 		"skip_scripts" => false,
-		"environment" => [],
+		"environment" => [
+			"SERVER_AUTOUPDATE" => '1'
+		],
 		"limits" => [
 			"memory" => 256,
 			"swap" => 0,
