@@ -14,7 +14,7 @@ Then use Composer's autoload unless you are using a framework that support compo
 require __DIR__.'/../vendor/autoload.php';
 ```
 
-And finally create an instance of the SDK, the `API_KEY` can be `Account API` or `Application API`, you can learn the difference below:
+And finally create an instance of the SDK, the `API_KEY` can be `Account API` or `Application API`, you can learn the difference [below](https://hcgcloud.github.io/pterodactyl-sdk-docs/getting-started/#type-of-api):
 
 ``` php
 $pterodactyl = new \HCGCloud\Pterodactyl\Pterodactyl(API_KEY_HERE, BASE_URI_HERE);
