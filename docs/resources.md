@@ -17,8 +17,27 @@ The allocation resource.
 ### Egg
 The egg resource.
 
+### Location
+The location resource.
+
+#### Functions
+``` php
+<?php
+  $location->delete();
+  $location->update(array $data);
+?>
+```
+
 ### Nest
 The nest resource.
+
+#### Functions
+``` php
+<?php
+  $nest->eggs();
+  $nest->egg($eggId);
+?>
+```
 
 ### Node
 The node resource.
@@ -28,6 +47,9 @@ The node resource.
 <?php
   $node->delete();
   $node->update(array $data);
+  $node->allocations(int $page = 1);
+  $node->createAllocation(array $data);
+  $node->deleteAllocation($allocationId);
 ?>
 ```
 
@@ -47,10 +69,26 @@ The server resource.
   $server->updateStartup(array $data);
   $server->reinstall();
   $server->rebuild();
+
+  $server->databases();
+  $server->database($databaseId);
+  $server->resetDatabasePassword($databaseId);
+  $server->deleteDatabase($databaseId);
   
   //Available with Account API
   $server->power($action);
   $server->command($command);
+?>
+```
+
+### ServerDatabase
+The server database resource.
+
+#### Functions
+``` php
+<?php
+  $serverdatabase->resetPassword();
+  $serverdatabase->delete();
 ?>
 ```
 
