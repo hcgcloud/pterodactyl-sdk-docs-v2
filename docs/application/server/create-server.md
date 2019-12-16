@@ -34,7 +34,7 @@ Create a new server.
 | feature_limits |  Feature limits | required&#124;array |
 | feature_limits.databases |  Database limit | present&#124;nullable&#124;integer&#124;min:0 |
 | feature_limits.allocations |  Allocation limit | present&#124;nullable&#124;integer&#124;min:0 |
-| environment |  Environment variables of the eggs | present&#124;array |
+| environment |  Environment variables of the egg | present&#124;array |
 | allocation |  Allocation ids | sometimes&#124;array |
 | allocation.default |  Default allocation id | sometimes&#124;bail&#124;unique:servers&#124;exists:allocations,id |
 | allocation.additional |  Additional allocation ids | sometimes&#124;array |
