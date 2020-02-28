@@ -207,3 +207,20 @@ Returns a `server instance`.
 	}
 ?>
 ```
+
+``` php
+<?php
+	try {
+		$server = $pterodactyl->server(14);
+		$server->container['startup_command'] = './Jcmp-Server';
+		$server->container['image'] = 'hcgcloud/pterodactyl-jc2mp:latest';
+		$server->container['environment'] = [
+			'SERVER_AUTOUPDATE'
+		];
+		$server->egg = 20;
+		$server->updateStartup();
+	} catch(\Exception $e){
+		print_r($e->getMessage());
+	}
+?>
+```
