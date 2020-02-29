@@ -28,13 +28,6 @@ Get the collection of allocations of a node.
 		"alias": "location-1.pterodactyl.panel",
 		"port": 4202,
 		"assigned": false,
-		"attributes": {
-			"id": 117,
-			"ip": "123.123.123.123",
-			"alias": "location-1.pterodactyl.panel",
-			"port": 4202,
-			"assigned": false
-		},
 		"object": "allocation"
 	}, {
 		"id": 103,
@@ -42,13 +35,6 @@ Get the collection of allocations of a node.
 		"alias": "location-1.pterodactyl.panel",
 		"port": 5555,
 		"assigned": false,
-		"attributes": {
-			"id": 103,
-			"ip": "123.123.123.123",
-			"alias": "location-1.pterodactyl.panel",
-			"port": 5555,
-			"assigned": false
-		},
 		"object": "allocation"
 	}, {
 		"id": 3,
@@ -56,13 +42,6 @@ Get the collection of allocations of a node.
 		"alias": "location-1.pterodactyl.panel",
 		"port": 8888,
 		"assigned": false,
-		"attributes": {
-			"id": 3,
-			"ip": "123.123.123.123",
-			"alias": "location-1.pterodactyl.panel",
-			"port": 8888,
-			"assigned": false
-		},
 		"object": "allocation"
 	}],
 	"meta": {

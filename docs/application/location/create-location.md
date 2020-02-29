@@ -30,13 +30,6 @@ Returns a `location instance`.
 	"id": 3,
 	"short": "location-3",
 	"long": "location-3",
-	"attributes": {
-		"id": 3,
-		"short": "location-3",
-		"long": "location-3",
-		"updated_at": "2019-12-16T05:20:19+00:00",
-		"created_at": "2019-12-16T05:20:19+00:00"
-	},
 	"createdAt": "2019-12-16T05:20:19+00:00",
 	"updatedAt": "2019-12-16T05:20:19+00:00",
 	"object": "location",

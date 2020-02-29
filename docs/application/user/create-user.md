@@ -44,20 +44,6 @@ Returns a `user instance`.
 	"rootAdmin": false,
 	"createdAt": "2019-12-11T10:47:19+00:00",
 	"updatedAt": "2019-12-11T10:47:19+00:00",
-	"attributes": {
-		"id": 29,
-		"external_id": null,
-		"uuid": "ba8be618-e3e1-4495-aff3-6a2075e98fe3",
-		"username": "testuser",
-		"email": "test@panel.com",
-		"first_name": "Test",
-		"last_name": "User",
-		"language": "en",
-		"root_admin": false,
-		"2fa": false,
-		"created_at": "2019-12-11T10:47:19+00:00",
-		"updated_at": "2019-12-11T10:47:19+00:00"
-	},
 	"object": "user",
 	"meta": {
 		"resource": "https:\/\/panel.pterodactyl\/api\/application\/users\/29"

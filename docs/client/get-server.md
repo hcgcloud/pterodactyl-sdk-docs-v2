@@ -37,24 +37,6 @@ Returns a `server instance`.
 	"pack": null,
 	"createdAt": null,
 	"updatedAt": null,
-	"attributes": {
-		"server_owner": true,
-		"identifier": "76c59598",
-		"uuid": "76c59598-22df-4490-92bc-f6fb4a80e0c7",
-		"name": "server1",
-		"description": "",
-		"limits": {
-			"memory": 128,
-			"swap": 0,
-			"disk": 256,
-			"io": 500,
-			"cpu": 0
-		},
-		"feature_limits": {
-			"databases": 0,
-			"allocations": 0
-		}
-	},
 	"limits": {
 		"memory": 128,
 		"swap": 0,
