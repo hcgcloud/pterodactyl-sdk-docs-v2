@@ -53,37 +53,6 @@
         <span class=nt>&quot;container&quot;</span><span class=p>:</span> <span class=s2>&quot;ubuntu:16.04&quot;</span><span class=p>,</span>
         <span class=nt>&quot;extends&quot;</span><span class=p>:</span> <span class=kc>null</span>
     <span class=p>},</span>
-    <span class=nt>&quot;attributes&quot;</span><span class=p>:</span> <span class=p>{</span>
-        <span class=nt>&quot;id&quot;</span><span class=p>:</span> <span class=mi>14</span><span class=p>,</span>
-        <span class=nt>&quot;uuid&quot;</span><span class=p>:</span> <span class=s2>&quot;c8422123-65e1-4e21-8097-a7b7356714b7&quot;</span><span class=p>,</span>
-        <span class=nt>&quot;nest&quot;</span><span class=p>:</span> <span class=mi>4</span><span class=p>,</span>
-        <span class=nt>&quot;author&quot;</span><span class=p>:</span> <span class=s2>&quot;support@pterodactyl.io&quot;</span><span class=p>,</span>
-        <span class=nt>&quot;description&quot;</span><span class=p>:</span> <span class=s2>&quot;The only aim in Rust is to survive. To do this you will need to overcome struggles such as hunger, thirst and cold. Build a fire. Build a shelter. Kill animals for meat. Protect yourself from other players, and kill them for meat. Create alliances with other players and form a town. Do whatever it takes to survive.&quot;</span><span class=p>,</span>
-        <span class=nt>&quot;docker_image&quot;</span><span class=p>:</span> <span class=s2>&quot;quay.io\/pterodactyl\/core:rust&quot;</span><span class=p>,</span>
-        <span class=nt>&quot;config&quot;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=nt>&quot;files&quot;</span><span class=p>:</span> <span class=p>[],</span>
-            <span class=nt>&quot;startup&quot;</span><span class=p>:</span> <span class=p>{</span>
-                <span class=nt>&quot;done&quot;</span><span class=p>:</span> <span class=s2>&quot;Server startup complete&quot;</span><span class=p>,</span>
-                <span class=nt>&quot;userInteraction&quot;</span><span class=p>:</span> <span class=p>[]</span>
-            <span class=p>},</span>
-            <span class=nt>&quot;stop&quot;</span><span class=p>:</span> <span class=s2>&quot;quit&quot;</span><span class=p>,</span>
-            <span class=nt>&quot;logs&quot;</span><span class=p>:</span> <span class=p>{</span>
-                <span class=nt>&quot;custom&quot;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
-                <span class=nt>&quot;location&quot;</span><span class=p>:</span> <span class=s2>&quot;latest.log&quot;</span>
-            <span class=p>},</span>
-            <span class=nt>&quot;extends&quot;</span><span class=p>:</span> <span class=kc>null</span>
-        <span class=p>},</span>
-        <span class=nt>&quot;startup&quot;</span><span class=p>:</span> <span class=s2>&quot;.\/RustDedicated -batchmode +server.port {{SERVER_PORT}} +server.identity \&quot;rust\&quot; +rcon.port {{RCON_PORT}} +rcon.web true +server.hostname \\\&quot;{{HOSTNAME}}\\\&quot; +server.level \\\&quot;{{LEVEL}}\\\&quot; +server.description \\\&quot;{{DESCRIPTION}}\\\&quot; +server.url \\\&quot;{{SERVER_URL}}\\\&quot; +server.headerimage \\\&quot;{{SERVER_IMG}}\\\&quot; +server.worldsize \\\&quot;{{WORLD_SIZE}}\\\&quot; +server.seed \\\&quot;{{WORLD_SEED}}\\\&quot; +server.maxplayers {{MAX_PLAYERS}} +rcon.password \\\&quot;{{RCON_PASS}}\\\&quot; +server.saveinterval {{SAVEINTERVAL}} {{ADDITIONAL_ARGS}}&quot;</span><span class=p>,</span>
-        <span class=nt>&quot;script&quot;</span><span class=p>:</span> <span class=p>{</span>
-            <span class=nt>&quot;privileged&quot;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
-            <span class=nt>&quot;install&quot;</span><span class=p>:</span> <span class=s2>&quot;apt update\r\napt -y --no-install-recommends install curl unzip lib32gcc1 ca-certificates\r\ncd \/tmp\r\ncurl -sSL -o steamcmd.tar.gz http:\/\/media.steampowered.com\/installer\/steamcmd_linux.tar.gz\r\n\r\nmkdir -p \/mnt\/server\/steam\r\ntar -xzvf steamcmd.tar.gz -C \/mnt\/server\/steam\r\ncd \/mnt\/server\/steam\r\nchown -R root:root \/mnt\r\n\r\nexport HOME=\/mnt\/server\r\n.\/steamcmd.sh +login anonymous +force_install_dir \/mnt\/server +app_update 258550 +quit\r\nmkdir -p \/mnt\/server\/.steam\/sdk32\r\ncp -v \/mnt\/server\/steam\/linux32\/steamclient.so \/mnt\/server\/.steam\/sdk32\/steamclient.so&quot;</span><span class=p>,</span>
-            <span class=nt>&quot;entry&quot;</span><span class=p>:</span> <span class=s2>&quot;bash&quot;</span><span class=p>,</span>
-            <span class=nt>&quot;container&quot;</span><span class=p>:</span> <span class=s2>&quot;ubuntu:16.04&quot;</span><span class=p>,</span>
-            <span class=nt>&quot;extends&quot;</span><span class=p>:</span> <span class=kc>null</span>
-        <span class=p>},</span>
-        <span class=nt>&quot;created_at&quot;</span><span class=p>:</span> <span class=s2>&quot;2019-01-05T12:56:46+00:00&quot;</span><span class=p>,</span>
-        <span class=nt>&quot;updated_at&quot;</span><span class=p>:</span> <span class=s2>&quot;2019-02-16T02:33:50+00:00&quot;</span>
-    <span class=p>},</span>
     <span class=nt>&quot;createdAt&quot;</span><span class=p>:</span> <span class=s2>&quot;2019-01-05T12:56:46+00:00&quot;</span><span class=p>,</span>
     <span class=nt>&quot;updatedAt&quot;</span><span class=p>:</span> <span class=s2>&quot;2019-02-16T02:33:50+00:00&quot;</span><span class=p>,</span>
     <span class=nt>&quot;object&quot;</span><span class=p>:</span> <span class=s2>&quot;egg&quot;</span><span class=p>,</span>
