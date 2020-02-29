@@ -5,7 +5,7 @@
 [![Software License][ico-license]](https://github.com/hcgcloud/pterodactyl-sdk/blob/master/LICENSE.md)
 [![Chat on Discord][ico-chat]][link-chat]
 
-Pterodactyl Panel API SDK for PHP (For Pterodactyl 0.7.x), a forked version from [@FruitBytes](https://github.com/FruitBytes).
+Pterodactyl Panel PHP SDK/API wrapper (For Pterodactyl 0.7.x), a forked version from [@FruitBytes](https://github.com/FruitBytes).
 
 ## Quick start
 
