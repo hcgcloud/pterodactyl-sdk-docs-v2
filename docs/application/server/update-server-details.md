@@ -134,17 +134,3 @@ Returns a `server instance`.
 	}
 ?>
 ```
-
-``` php
-<?php
-	try {
-		$server = $pterodactyl->server(14);
-		$server->name = 'newserver';
-		$server->user = 1;
-		$server->description = 'mynewdescription';
-		$server->updateDetails();
-	} catch(\Exception $e){
-		print_r($e->getMessage());
-	}
-?>
-```

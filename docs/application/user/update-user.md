@@ -91,21 +91,3 @@ Returns a `user instance`.
 	}
 ?>
 ```
-
-``` php
-<?php
-	try {
-		$user = $pterodactyl->user(29);
-		$user->email = 'test@panel.com';
-		$user->username = 'testuser';
-		$user->password = 'thepassword';
-		$user->language = 'en';
-		$user->rootAdmin = false;
-		$user->firstName = 'Test';
-		$user->lastName = 'User';
-		$user->update();
-	} catch(\Exception $e){
-		print_r($e->getMessage());
-	}
-?>
-```
