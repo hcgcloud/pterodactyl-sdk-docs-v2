@@ -16,6 +16,7 @@ Get a server instance, including it's allocations.
 | Parameter | Description | Rules |
 | - | - | - |
 | serverId | The `id` of the server | |
+| includes | The [related data](/includes/) you want to query | |
 
 ## Returns
 

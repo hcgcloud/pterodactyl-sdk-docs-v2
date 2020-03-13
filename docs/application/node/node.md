@@ -13,6 +13,7 @@ Get a node instance.
 | Parameter | Description | Rules |
 | - | - | - |
 | nodeId | The `id` of the node | |
+| includes | The [related data](/includes/) you want to query | |
 
 ## Returns
 

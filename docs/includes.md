@@ -5,6 +5,7 @@ You may notice that some functions like `server()`, `user()` have a parameter ca
 For example, to query all servers belongs to a user, you can use the following code:
 
 ```php
+<?php
   $servers = $pterodactyl->user(1, ['servers']);
   print_r($servers);
 ```
@@ -26,6 +27,7 @@ Here's a list of available includes, but it may not be a complete one.
 
 ### Server
  - allocations
+ - databases
  - subusers
 
 ### User

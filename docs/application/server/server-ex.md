@@ -16,6 +16,7 @@ Get a server instance by external id, including it's allocations.
 | Parameter | Description | Rules |
 | - | - | - |
 | externalId | The `externalId` of the server | |
+| includes | The [related data](/includes/) you want to query | |
 
 ## Returns
 
