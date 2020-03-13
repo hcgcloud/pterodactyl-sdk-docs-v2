@@ -18,6 +18,7 @@ nav:
     - 'Welcome': index.md
     - 'Getting Started': getting-started.md
     - 'Resources': resources.md
+    - 'Includes': includes.md
     - 'Exceptions': exceptions.md
     - 'References': references.md
   - 'Client':
