@@ -4,7 +4,7 @@ Get a node instance.
 ## Usage
 ``` php
 <?php
-	$pterodactyl->node($nodeId);
+	$pterodactyl->node($nodeId, $includes = []);
 ?>
 ```
 

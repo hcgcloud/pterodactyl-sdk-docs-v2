@@ -35,7 +35,7 @@ The nest resource.
 ``` php
 <?php
   $nest->eggs();
-  $nest->egg($eggId);
+  $nest->egg($eggId, $includes = []);
 ?>
 ```
 
