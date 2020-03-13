@@ -13,6 +13,7 @@ Get a nest instance.
 | Parameter | Description | Rules |
 | - | - | - |
 | nestId | The `id` of the nest | |
+| includes | The [related data](/includes/) you want to query | |
 
 ## Returns
 

@@ -16,6 +16,7 @@ Get a user instance.
 | Parameter | Description | Rules |
 | - | - | - |
 | userId | The `id` of the user | |
+| includes | The [related data](/includes/) you want to query | |
 
 ## Returns
 

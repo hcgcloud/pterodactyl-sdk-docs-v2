@@ -13,6 +13,7 @@ Get a location instance.
 | Parameter | Description | Rules |
 | - | - | - |
 | locationId | The `id` of the location | |
+| includes | The [related data](/includes/) you want to query | |
 
 ## Returns
 

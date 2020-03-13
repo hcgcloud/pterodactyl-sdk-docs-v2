@@ -16,6 +16,7 @@ Get a user instance by external id.
 | Parameter | Description | Rules |
 | - | - | - |
 | externalId | The `externalId` of the user | |
+| includes | The [related data](/includes/) you want to query | |
 
 ## Returns
 

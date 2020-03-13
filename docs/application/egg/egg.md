@@ -7,7 +7,7 @@ Get an egg instance.
 	$pterodactyl->egg($nestId, $eggId, $includes = []);
 	
 	//For a nest instance
-	$nest->egg($eggId);
+	$nest->egg($eggId, $includes = []);
 ?>
 ```
 
@@ -17,6 +17,8 @@ Get an egg instance.
 | - | - | - |
 | nestId | The `id` of the nest | |
 | eggId | The `id` of the egg | |
+| includes | The [related data](/includes/) you want to query | |
+
 
 ## Returns
 
