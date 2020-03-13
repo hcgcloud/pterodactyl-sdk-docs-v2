@@ -4,7 +4,7 @@ Get a user instance.
 ## Usage
 ``` php
 <?php
-	$pterodactyl->user($userId);
+	$pterodactyl->user($userId, $includes = []);
 ?>
 ```
 

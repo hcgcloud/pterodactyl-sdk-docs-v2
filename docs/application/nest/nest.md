@@ -4,7 +4,7 @@ Get a nest instance.
 ## Usage
 ``` php
 <?php
-	$pterodactyl->nest($nestId);
+	$pterodactyl->nest($nestId, $includes = []);
 ?>
 ```
 

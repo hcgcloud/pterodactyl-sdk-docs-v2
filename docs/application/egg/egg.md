@@ -4,7 +4,7 @@ Get an egg instance.
 ## Usage
 ``` php
 <?php
-	$pterodactyl->egg($nestId, $eggId);
+	$pterodactyl->egg($nestId, $eggId, $includes = []);
 	
 	//For a nest instance
 	$nest->egg($eggId);

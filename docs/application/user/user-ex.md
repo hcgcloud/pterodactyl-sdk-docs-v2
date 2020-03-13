@@ -4,7 +4,7 @@ Get a user instance by external id.
 ## Usage
 ``` php
 <?php
-	$pterodactyl->userEx($externalId);
+	$pterodactyl->userEx($externalId, $includes = []);
 ?>
 ```
 

@@ -4,7 +4,7 @@ Get a server instance by external id, including it's allocations.
 ## Usage
 ``` php
 <?php
-	$pterodactyl->serverEx($externalId);
+	$pterodactyl->serverEx($externalId, $includes = []);
 ?>
 ```
 
@@ -72,21 +72,6 @@ Returns a `server instance`.
 			"STARTUP": ".\/Jcmp-Server",
 			"P_SERVER_LOCATION": "test",
 			"P_SERVER_UUID": "76c59598-22df-4490-92bc-f6fb4a80e0c7"
-		}
-	},
-	"relationships": {
-		"allocations": {
-			"object": "list",
-			"data": [{
-				"object": "allocation",
-				"attributes": {
-					"id": 55,
-					"ip": "123.123.123.123",
-					"alias": "node-1.pterodactyl.panel",
-					"port": 50053,
-					"assigned": true
-				}
-			}]
 		}
 	}
 }

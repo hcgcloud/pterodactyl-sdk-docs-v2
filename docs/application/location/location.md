@@ -4,7 +4,7 @@ Get a location instance.
 ## Usage
 ``` php
 <?php
-	$pterodactyl->location($locationId);
+	$pterodactyl->location($locationId, $includes = []);
 ?>
 ```
 
