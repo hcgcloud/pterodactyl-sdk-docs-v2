@@ -12,7 +12,7 @@ jobs:
       with:
         python-version: 3.7
     - name: Install dependencies
-      run: pip install mkdocs mkdocs-material mkdocs-minify-plugin
+      run: pip install mkdocs==1.1.2 mkdocs-material==4.6.3 mkdocs-minify-plugin
     - name: Deploy documents
       run: |
         echo -e "machine github.com\n  login ${{ secrets.PERSONAL_TOKEN }}" > ~/.netrc
