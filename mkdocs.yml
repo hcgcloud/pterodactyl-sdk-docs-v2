@@ -27,55 +27,55 @@ nav:
     - 'Power server': client/power-server.md
     - 'Command server': client/command-server.md
     - 'Utilization server': client/utilization-server.md
-  - 'Application':
+  - 'Api':
     - 'Server':
-      - 'List servers': application/server/servers.md
-      - 'Get server': application/server/server.md
-      - 'Get server by external id': application/server/server-ex.md
-      - 'Create server': application/server/create-server.md
-      - 'Delete server': application/server/delete-server.md
-      - 'Force delete server': application/server/force-delete-server.md
-      - 'Suspend server': application/server/suspend-server.md
-      - 'Unsuspend server': application/server/unsuspend-server.md
-      - 'Reinstall server': application/server/reinstall-server.md
-      - 'Rebuild server': application/server/rebuild-server.md
-      - 'Update server details': application/server/update-server-details.md
-      - 'Update server build': application/server/update-server-build.md
-      - 'Update server startup': application/server/update-server-startup.md
-      - 'List server databases': application/server/server-databases.md
-      - 'Get server database': application/server/server-database.md
-      - 'Create server database': application/server/create-server-database.md
-      - 'Reset server database password': application/server/reset-server-database-password.md
-      - 'Delete server database': application\server\delete-server-database.md
+      - 'List servers': api/server/paginate.md
+      - 'Get server': api/server/get.md
+      - 'Get server by external id': api/server/server-ex.md
+      - 'Create server': api/server/create-server.md
+      - 'Delete server': api/server/delete-server.md
+      - 'Force delete server': api/server/force-delete-server.md
+      - 'Suspend server': api/server/suspend-server.md
+      - 'Unsuspend server': api/server/unsuspend-server.md
+      - 'Reinstall server': api/server/reinstall-server.md
+      - 'Rebuild server': api/server/rebuild-server.md
+      - 'Update server details': api/server/update-server-details.md
+      - 'Update server build': api/server/update-server-build.md
+      - 'Update server startup': api/server/update-server-startup.md
+      - 'List server databases': api/server/server-databases.md
+      - 'Get server database': api/server/server-database.md
+      - 'Create server database': api/server/create-server-database.md
+      - 'Reset server database password': api/server/reset-server-database-password.md
+      - 'Delete server database': api/server/delete-server-database.md
     - 'User':
-      - 'List users': application/user/users.md
-      - 'Get user': application/user/user.md
-      - 'Get user by external id': application/user/user-ex.md
-      - 'Create user': application/user/create-user.md
-      - 'Update user': application/user/update-user.md
-      - 'Delete user': application/user/delete-user.md
+      - 'List users': api/user/users.md
+      - 'Get user': api/user/user.md
+      - 'Get user by external id': api/user/user-ex.md
+      - 'Create user': api/user/create-user.md
+      - 'Update user': api/user/update-user.md
+      - 'Delete user': api/user/delete-user.md
     - 'Location':
-      - 'Get locations': application/location/locations.md
-      - 'Get location': application/location/location.md
-      - 'Create location': application/location/create-location.md
-      - 'Update location': application/location/update-location.md
-      - 'Delete location': application/location/delete-location.md
+      - 'Get locations': api/location/locations.md
+      - 'Get location': api/location/location.md
+      - 'Create location': api/location/create-location.md
+      - 'Update location': api/location/update-location.md
+      - 'Delete location': api/location/delete-location.md
     - 'Node':
-      - 'List nodes': application/node/nodes.md
-      - 'Get node': application/node/node.md
-      - 'Create node': application/node/create-node.md
-      - 'Update node': application/node/update-node.md
-      - 'Delete node': application/node/delete-node.md
+      - 'List nodes': api/node/nodes.md
+      - 'Get node': api/node/node.md
+      - 'Create node': api/node/create-node.md
+      - 'Update node': api/node/update-node.md
+      - 'Delete node': api/node/delete-node.md
     - 'Allocation':
-      - 'List allocations': application/allocation/allocations.md
-      - 'Create allocation': application/allocation/create-allocation.md
-      - 'Delete allocation': application/allocation/delete-allocation.md
+      - 'List allocations': api/allocation/allocations.md
+      - 'Create allocation': api/allocation/create-allocation.md
+      - 'Delete allocation': api/allocation/delete-allocation.md
     - 'Nest':
-      - 'List nests': application/nest/nests.md
-      - 'Get nest': application/nest/nest.md
+      - 'List nests': api/nest/nests.md
+      - 'Get nest': api/nest/nest.md
     - 'Egg':
-      - 'List eggs': application/egg/eggs.md
-      - 'Get egg': application/egg/egg.md
+      - 'List eggs': api/egg/eggs.md
+      - 'Get egg': api/egg/egg.md
 
 plugins:
   - search

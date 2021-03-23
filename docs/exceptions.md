@@ -1,5 +1,10 @@
 # Exceptions
 
+## AccessDeniedHttpException
+This exception is thrown when the server returns `403`.
+
+*Solution: Check the api key and permission.*
+
 ## FailedActionException
 This exception is thrown when the server returns `400`.
 
@@ -8,7 +13,12 @@ This exception is thrown when the server returns `400`.
 ## NotFoundException
 This exception is thrown when the server returns `404`.
 
-*Solution: Check if the resource exists.*
+*Solution: Check the response body.*
+
+## InvaildApiTypeException
+This exception is thrown when `API_TYPE` in instance creation is not set to `application` or `client`.
+
+*Solution: Check API_TYPE in instance creation.*
 
 ## TimeoutException
 This exception is thrown when the request is timeout.
@@ -25,7 +35,7 @@ You can use code like the following to catch exceptions:
 ```php
 <?php
 	try {
-		$servers = $pterodactyl->createServer([
+		$servers = $pterodactyl->servers->create([
 			//...
 		]);
 	} catch(\HCGCloud\Pterodactyl\Exceptions\ValidationException $e){

@@ -17,14 +17,16 @@ require __DIR__.'/../vendor/autoload.php';
 And finally create an instance of the SDK, the `API_KEY` can be `Account API` or `Application API`, you can learn the difference [below](https://hcgcloud.github.io/pterodactyl-sdk-docs/getting-started/#type-of-api):
 
 ``` php
-$pterodactyl = new \HCGCloud\Pterodactyl\Pterodactyl(API_KEY_HERE, BASE_URI_HERE);
+$pterodactyl = new \HCGCloud\Pterodactyl\Pterodactyl(API_KEY, BASE_URI, API_TYPE = 'application');
+// API_TYPE can be set to application/client
 ```
 
 or you can also use create an instance in this style:
 
 ``` php
 use HCGCloud\Pterodactyl\Pterodactyl;
-$pterodactyl = new Pterodactyl(API_KEY_HERE, BASE_URI_HERE);
+$pterodactyl = new Pterodactyl(API_KEY, BASE_URI, API_TYPE = 'application');
+// API_TYPE can be set to application/client
 ```
 
 ## Usage
@@ -49,19 +51,17 @@ Application API is for your panel itself, it can perform like `Create Server` an
 Can be generated from: [https://yourpanel.url/admin/api](https://yourpanel.url/admin/api)
 
 ### Example
-Using the pterodactyl instance you may perform multiple actions as well as retrieve the different resources Pterodactyl's API provides, here are some examples using `Application API`:
-
 ``` php
-$servers = $pterodactyl->servers();
+$servers = $pterodactyl->servers->paginate();
 ```
 
-This will give you an array of servers that you have access to, each server is represented by an instance of `HCGCloud\Pterodactyl\Resources\Server`, this instance has multiple public
+This will give you a paginated collection of servers that you have access to, each server is represented by an instance of `HCGCloud\Pterodactyl\Resources\Server`, this instance has multiple public
 properties like `$name`, `$id`, `$owner`, `$memory`, and others.
 
 You may also retrieve a single server using:
 
 ``` php
-$server = $pterodactyl->server(SERVER_ID_HERE);
+$server = $pterodactyl->servers->get(SERVER_ID_HERE);
 ```
 
 **For other functions, you can find them from the navigation.**

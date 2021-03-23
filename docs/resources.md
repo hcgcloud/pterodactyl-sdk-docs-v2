@@ -1,13 +1,13 @@
 # Resources
 
-When you use apis like `server()`, `node()`, it will return a resource instance.
+When you use apis like `paginate()`, `get()`, it will return a resource instance.
 
 Then you can call the functions of the instance, like `$server->update()`, `$node->delete()`, etc.
 
-!!! note
-    Be noticed that when you use functions like `update()`, the changes won't applied to the instance itself, so you should manually call the `get` api again to get the latest data.
-
 Here's a list of available resource types.
+
+!!! warning
+    The list is not up to date, please check: [https://github.com/hcgcloud/pterodactyl-sdk/tree/develop/src/Resources](https://github.com/hcgcloud/pterodactyl-sdk/tree/develop/src/Resources).
 
 ## Type
 

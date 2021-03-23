@@ -5,7 +5,12 @@
 [![Software License][ico-license]](https://github.com/hcgcloud/pterodactyl-sdk/blob/master/LICENSE.md)
 [![Chat on Discord][ico-chat]][link-chat]
 
-Pterodactyl Panel PHP SDK/API wrapper (For Pterodactyl 0.7.x), a forked version from [@FruitBytes](https://github.com/FruitBytes).
+Pterodactyl Panel PHP SDK(API wrapper).
+
+!!! warning
+    **This documentation is for `v2` version**, click [here](https://hcgcloud.github.io/pterodactyl-sdk-docs-v1/) for `v1` version.
+    
+    **The documentation has not been completed**, you can [create PRs](https://github.com/hcgcloud/pterodactyl-sdk-docs) to improve this documentation.
 
 ## Quick start
 
@@ -24,14 +29,15 @@ require __DIR__.'/../vendor/autoload.php';
 And finally create an instance of the SDK:
 
 ``` php
-$pterodactyl = new \HCGCloud\Pterodactyl\Pterodactyl(API_KEY_HERE, BASE_URI_HERE);
+$pterodactyl = new \HCGCloud\Pterodactyl\Pterodactyl(API_KEY, BASE_URI, API_TYPE = 'application');
+// API_TYPE can be set to application/client
 ```
 
 Then you can call the apis.
 
 ## Usage
 
-Please check this documentation for more details.
+Please check `Api` from the navigation for more details.
 
 ## Support
 
