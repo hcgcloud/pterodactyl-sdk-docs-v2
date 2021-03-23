@@ -6,11 +6,16 @@ For example, to query all servers belongs to a user, you can use the following c
 
 ```php
 <?php
-  $servers = $pterodactyl->user(1, ['servers']);
+  $servers = $pterodactyl->users->get(1, [
+    'include' => 'servers'
+  ]);
   print_r($servers);
 ```
 
-Here's a list of available includes, but it may not be a complete one.
+Here's a list of available includes.
+
+!!! warning
+    The list is not up to date, please check: [https://dashflo.net/docs/api/pterodactyl/v1/](https://dashflo.net/docs/api/pterodactyl/v1/).
 
 ## Includes
 

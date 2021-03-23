@@ -5,4 +5,6 @@
 Documentation for [hcgcloud/pterodactyl-sdk](https://github.com/hcgcloud/pterodactyl-sdk)
 
 ## Read the docs
-https://hcgcloud.github.io/pterodactyl-sdk-docs/
+Latest: https://hcgcloud.github.io/pterodactyl-sdk-docs/
+
+For `v1` version: https://hcgcloud.github.io/pterodactyl-sdk-docs-v1/
