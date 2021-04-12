@@ -29,7 +29,7 @@ require __DIR__.'/../vendor/autoload.php';
 And finally create an instance of the SDK:
 
 ``` php
-$pterodactyl = new \HCGCloud\Pterodactyl\Pterodactyl(API_KEY, BASE_URI, API_TYPE = 'application');
+$pterodactyl = new \HCGCloud\Pterodactyl\Pterodactyl(BASE_URI, API_KEY, API_TYPE = 'application');
 // API_TYPE can be set to application/client
 ```
 
