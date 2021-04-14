@@ -21,32 +21,29 @@ nav:
     - 'Includes': includes.md
     - 'Exceptions': exceptions.md
     - 'References': references.md
-  - 'Client':
-    - 'List servers': client/list-servers.md
-    - 'Get server': client/get-server.md
-    - 'Power server': client/power-server.md
-    - 'Command server': client/command-server.md
-    - 'Utilization server': client/utilization-server.md
   - 'Api':
     - 'Server':
       - 'List servers': api/server/paginate.md
       - 'Get server': api/server/get.md
-      - 'Get server by external id': api/server/server-ex.md
-      - 'Create server': api/server/create-server.md
-      - 'Delete server': api/server/delete-server.md
-      - 'Force delete server': api/server/force-delete-server.md
-      - 'Suspend server': api/server/suspend-server.md
-      - 'Unsuspend server': api/server/unsuspend-server.md
-      - 'Reinstall server': api/server/reinstall-server.md
-      - 'Rebuild server': api/server/rebuild-server.md
-      - 'Update server details': api/server/update-server-details.md
-      - 'Update server build': api/server/update-server-build.md
-      - 'Update server startup': api/server/update-server-startup.md
-      - 'List server databases': api/server/server-databases.md
-      - 'Get server database': api/server/server-database.md
-      - 'Create server database': api/server/create-server-database.md
-      - 'Reset server database password': api/server/reset-server-database-password.md
-      - 'Delete server database': api/server/delete-server-database.md
+      - 'Get server by external id': api/server/get-ex.md
+      - 'Create server': api/server/create.md
+      - 'Delete server': api/server/delete.md
+      - 'Force delete server': api/server/force-delete.md
+      - 'Suspend server': api/server/suspend.md
+      - 'Unsuspend server': api/server/unsuspend.md
+      - 'Reinstall server': api/server/reinstall.md
+      - 'Rebuild server': api/server/rebuild.md
+      - 'Power server': api/server/power.md
+      - 'Command server': api/server/command.md
+      - 'Get server resources': api/server/resources.md
+      - 'Update server details': api/server/update-details.md
+      - 'Update server build': api/server/update-build.md
+      - 'Update server startup': api/server/update-startup.md
+      - 'List server databases': api/server/databases.md
+      - 'Get server database': api/server/database.md
+      - 'Create server database': api/server/create-database.md
+      - 'Reset server database password': api/server/reset-database-password.md
+      - 'Delete server database': api/server/delete-database.md
     - 'User':
       - 'List users': api/user/users.md
       - 'Get user': api/user/user.md

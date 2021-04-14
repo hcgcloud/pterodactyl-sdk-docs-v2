@@ -1,22 +1,24 @@
-# Get Server <small>with Application API</small>
-Get a server instance, including it's allocations.
+# Get Server
+Get a server instance.
 
 ## Usage
 ``` php
 <?php
-	$pterodactyl->server($serverId, $includes = []);
+	$pterodactyl->servers->get($serverId, $query = []);
 ?>
 ```
 
 ## Parameters
 
 !!! note
-    The `serverId` is the `id` of the server, not `identifier`, `externalId` or `uuid`.
+    For **Application API**, the `serverId` is the `id` of the server.
+	
+	For **Client API**, the `serverId` is the `identifier` of the server.
 
 | Parameter | Description | Rules |
 | - | - | - |
-| serverId | The `id` of the server | |
-| includes | The [related data](/includes/) you want to query | |
+| serverId | The `id` or `identifier` of the server | |
+| query | Additional query parameters | |
 
 ## Returns
 
@@ -82,7 +84,7 @@ Returns a `server instance`.
 
 ``` php
 <?php
-	$server = $pterodactyl->server(14);
+	$server = $pterodactyl->servers->get(14);
 	print_r($server);
 ?>
 ```
