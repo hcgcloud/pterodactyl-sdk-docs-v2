@@ -25,6 +25,7 @@ nav:
     - 'Server':
       - 'List servers': api/server/paginate.md
       - 'Get server': api/server/get.md
+      - 'Get Console': api/server/get_console.md
       - 'Get server by external id': api/server/get-ex.md
       - 'Create server': api/server/create.md
       - 'Delete server': api/server/delete.md
