@@ -4,7 +4,7 @@ Update details of the given server.
 ## Usage
 ``` php
 <?php
-	$pterodactyl->updateServerDetails($serverId, array $data);
+	$pterodactyl->servers->updateDetails($serverId, array $data);
 	
 	//For a server instance
 	$server->updateDetails(array $data);
@@ -109,7 +109,7 @@ Returns a `server instance`.
 ``` php
 <?php
 	try {
-		$pterodactyl->updateServerDetails(14, [
+		$pterodactyl->servers->updateDetails(14, [
 			'name' => 'newserver',
 			'user' => 1,
 			'description' => 'mynewdescription'
@@ -123,7 +123,7 @@ Returns a `server instance`.
 ``` php
 <?php
 	try {
-		$server = $pterodactyl->server(14);
+		$server = $pterodactyl->servers->get(14);
 		$server->updateDetails([
 			'name' => 'newserver',
 			'user' => 1,
