@@ -1,5 +1,5 @@
 # Change Power State <small>with Client API</small>
-Get a server's websocket.
+Change the Power State of a server.
 
 ## Usage
 ``` php
