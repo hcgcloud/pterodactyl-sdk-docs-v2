@@ -2,8 +2,9 @@ site_name: Pterodactyl PHP SDK
 theme:
   name: 'material'
   language: 'en'
-  feature:
-    tabs: true
+  features:
+    - navigation.tabs
+    - navigation.top
     
 repo_name: hcgcloud/pterodactyl-sdk
 repo_url: https://github.com/hcgcloud/pterodactyl-sdk
@@ -83,7 +84,7 @@ plugins:
 extra:
   manifest: 'manifest.webmanifest'
   social:
-    - type: 'github'
+    - icon: fontawesome/brands/github-alt
       link: 'https://github.com/hcgcloud'
 
 markdown_extensions:
