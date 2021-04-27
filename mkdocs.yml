@@ -26,7 +26,6 @@ nav:
     - 'Server':
       - 'List servers': api/server/paginate.md
       - 'Get server': api/server/get.md
-      - 'Get Console': api/server/get_console.md
       - 'Get server by external id': api/server/get-ex.md
       - 'Create server': api/server/create.md
       - 'Delete server': api/server/delete.md
@@ -37,6 +36,7 @@ nav:
       - 'Rebuild server': api/server/rebuild.md
       - 'Power server': api/server/power.md
       - 'Command server': api/server/command.md
+      - 'Get server websocket': api/server/websocket.md
       - 'Get server resources': api/server/resources.md
       - 'Update server details': api/server/update-details.md
       - 'Update server build': api/server/update-build.md
