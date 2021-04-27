@@ -1,4 +1,4 @@
-# Get Server Websocket<small>with Client API</small>
+# Get Server Websocket <small>with Client API</small>
 Get a server's websocket.
 
 ## Usage
