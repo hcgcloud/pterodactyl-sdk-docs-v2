@@ -8,9 +8,9 @@
 Pterodactyl Panel PHP SDK(API wrapper).
 
 !!! warning
-    **This documentation is for `v2` version**, click [here](https://hcgcloud.github.io/pterodactyl-sdk-docs-v1/) for `v1` version.
+    **This documentation is for `v2` version**, click [here](https://hcgcloud.github.io/pterodactyl-sdk-docs/) for `v1` version.
     
-    **The documentation has not been completed**, you can [create PRs](https://github.com/hcgcloud/pterodactyl-sdk-docs) to improve this documentation.
+    **The documentation has not been completed**, you can [create PRs](https://github.com/hcgcloud/pterodactyl-sdk-docs-v2) to improve this documentation.
 
 ## Quick start
 
