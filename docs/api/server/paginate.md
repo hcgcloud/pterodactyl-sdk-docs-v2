@@ -24,7 +24,7 @@ Get a paginated collection of servers.
 
 ``` php
 <?php
-	$server = $pterodactyl->servers->get();
-	print_r($server);
+	$servers = $pterodactyl->servers->paginate();
+	print_r($servers);
 ?>
 ```

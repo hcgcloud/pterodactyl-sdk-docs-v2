@@ -6,10 +6,10 @@ For example, to query all servers belongs to a user, you can use the following c
 
 ```php
 <?php
-  $servers = $pterodactyl->users->get(1, [
+  $users = $pterodactyl->users->get(1, [
     'include' => 'servers'
   ]);
-  print_r($servers);
+  print_r($users);
 ```
 
 Here's a list of available includes.

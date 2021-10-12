@@ -17,7 +17,10 @@ Pterodactyl Panel PHP SDK(API wrapper).
 To install the SDK in your project you need to require the package via [composer](http://getcomposer.org):
 
 ``` bash
-composer require hcgcloud/pterodactyl-sdk
+composer require hcgcloud/pterodactyl-sdk:v2.0.0-alpha.2
+
+# or use the development version for latest features
+composer require hcgcloud/pterodactyl-sdk:dev-develop
 ```
 
 Then use Composer's autoload unless you are using a framework that support composer autoload:
@@ -30,7 +33,7 @@ And finally create an instance of the SDK:
 
 ``` php
 $pterodactyl = new \HCGCloud\Pterodactyl\Pterodactyl(BASE_URI, API_KEY, API_TYPE = 'application');
-// API_TYPE can be set to application/client
+// API_TYPE can be set to 'application' or 'client'
 ```
 
 Then you can call the apis.
